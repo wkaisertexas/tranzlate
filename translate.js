@@ -1,0 +1,112 @@
+import OpenAI from "openai";
+
+import fs from "fs";
+
+import LANGUAGES from "./languages.js";
+
+const makePrompt = ({projectDescription, comment, string, sourceLanguage, targetLanguage}) => (`
+${projectDescription}
+
+${comment ? `a translation comment has been made: ${comment}\n` : ""}
+input string which should be translated to ${LANGUAGES[targetLanguage]}:
+
+${string}
+
+Translation from ${LANGUAGES[sourceLanguage]} to ${LANGUAGES[targetLanguage]}: `
+);
+
+const readStringCatalog = (path) => {
+  let stringData = fs.readFileSync(path);
+  return JSON.parse(stringData);
+}
+
+const writeStringCatalog = (path, obj) => {
+  let stringData = JSON.stringify(obj, null, 4);
+  fs.writeFileSync(path, stringData);
+}
+
+const multiTranslate = async ({key, strings, languages, sourceLanguage, description}) => {
+  let returnValue = {}; // return value has `state` and `value` keys
+
+  await Promise.all(languages.map(async (language) => {
+    let completion = await getCompletion({string: key, comment: strings[key].comment, targetLanguage:language, sourceLanguage, description});
+    returnValue[language] = {
+      value: completion,
+      state: review_state,
+    };
+  }))
+
+  return {localizations: returnValue};
+}
+
+const getCompletion = async ({string, comment, sourceLanguage, targetLanguage, description}) => {
+  const prompt = makePrompt({projectDescription: description, string, comment, sourceLanguage, targetLanguage});
+  const gptResponse = await openai.chat.completions.create({
+    model: completionModel,
+    messages: [
+      {
+        role: "system",
+        content: prompt,
+      },
+      {
+        role: "user",
+        content: string,
+      }
+    ]
+  });
+
+  let response = gptResponse.choices[0].message.content;
+  return response;
+};
+
+let openai, completionModel;
+let review_state = "needs_review"
+
+const translate = async ({inputFile, outputFile, languages, model, description, apiKey, state}) => {
+  // log each input
+  console.log(`sourceFile: ${inputFile}`);
+  console.log(`targetFile: ${outputFile}`);
+  console.log(`languages: ${languages}`);
+  console.log(`model: ${model}`);
+  console.log(`description: ${description}`);
+  console.log(`apiKey: ${apiKey}`);
+
+  // read the source 
+let stringCatalog = readStringCatalog(inputFile);
+let sourceLanguage = stringCatalog["sourceLanguage"];
+let strings = stringCatalog["strings"];
+  
+openai = new OpenAI({
+  apiKey: apiKey,
+})
+completionModel = model;
+review_state = state;
+
+let newStrings = await Promise.all(Object.keys(strings).map(async (key) => (await multiTranslate({key, strings, languages, sourceLanguage, description}))));
+
+let newStringsObj = {};
+Object.keys(strings).forEach((key, index) => {
+  newStringsObj[key] = newStrings[index];
+});
+// constructing the final string stringCatalog
+let newStringCatalog = {
+  sourceLanguage: sourceLanguage,
+  strings: newStringsObj,
+  version: stringCatalog.version,
+}
+
+// write the final string stringCatalog
+
+writeStringCatalog(outputFile, newStringCatalog);
+}
+
+translate({
+  inputFile: "Localizable.xcstrings",
+  outputFile: "Localizable2.xcstrings",
+  languages: ["ja"],
+  model: "gpt-3.5-turbo",
+  description: "",
+  apiKey:  process.env.OPENAI_API_KEY,
+})
+
+export { translate };
