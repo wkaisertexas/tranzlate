@@ -1,5 +1,6 @@
 # CUSTOM GITIGNORE
 *.xcstrings
+.DS_Store
 
 # Following from: https://github.com/github/gitignore/blob/main/Node.gitignore
 # ---------------------------------------------------------------------------
