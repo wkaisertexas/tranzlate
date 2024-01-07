@@ -1,11 +1,15 @@
 {
-  "name": "tranzlate",
+  "name": "tranzlate.js",
   "version": "1.0.0",
   "description": "Make all App-Store compatable languages into string catalogs",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "jiti ./src/index.js",
+    "lint:fix": "prettier --write . && eslint --fix",
+    "lint": "prettier --check . && eslint",
+    "build": "pkgroll",
+    "prepare": "husky install"
   },
   "keywords": [
     "translation",
@@ -16,13 +20,36 @@
     "google",
     "translate"
   ],
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "tranzlate": "./dist/index.js",
+    "translate": "./dist/index.js"
+  },
   "author": "William Kaiser",
   "license": "MIT",
+  "lint-staged": {
+    "**/*.{ts,js,json}": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wkaisertexas/tranzlate"
+  },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
     "clack": "^0.1.0",
     "cleye": "^1.3.2",
+    "eslint": "^8.56.0",
+    "glob": "^10.3.10",
     "openai": "^4.24.1",
-    "picocolors": "^1.0.0"
+    "picocolors": "^1.0.0",
+    "pkgroll": "^2.0.1",
+    "tranzlate.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "husky": "^4.3.8",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.1.1"
   }
 }
