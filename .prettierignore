@@ -1,15 +1,4 @@
 # Ignore artifacts:
 build
 coverage
-
-# Ignore all files in the .gitignore file
-!.gitignore
-.gitignore
-.prettierrc
-.prettierignore
-
-.DS_Store
-!.prettierignore
-!.prettierrc
-
-.prettierrc
+dist
