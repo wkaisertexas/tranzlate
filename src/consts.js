@@ -1,3 +1,8 @@
+/// Where we store all the constants into the project
+
+const DEFAULT_INPUT_FILE = "Localizable.xcstrings";
+const VALID_MODELS = ["gpt-3.5-turbo", "gpt-4"];
+const SUPPORTED_TRANSLATIONS = ["en", "es", "fr", "de", "it", "pt", "ru", "zh"];
 const LANGUAGES = {
   ar: "Arabic",
   ca: "Catalan",
@@ -41,4 +46,4 @@ const LANGUAGES = {
   vi: "Vietnamese",
 };
 
-export default LANGUAGES;
+export { DEFAULT_INPUT_FILE, VALID_MODELS, SUPPORTED_TRANSLATIONS, LANGUAGES };
