@@ -3,7 +3,7 @@ import OpenAI from "openai";
 import { readFileSync, writeFileSync } from "fs";
 import { globSync } from "glob";
 
-import LANGUAGES from "./languages.js";
+import { LANGUAGES } from "./consts.js";
 
 const makePrompt = ({
   projectDescription,
