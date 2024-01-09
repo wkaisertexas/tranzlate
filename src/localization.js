@@ -1,12 +1,9 @@
 import fs from "fs";
 
-let BASELANGUAGE = "fr";
-let CURRENTLANGUAGE = loadLanguage() || BASELANGUAGE;
+import { BASE_LANGUAGE } from "./consts.js";
+import { getLanguage } from "./config.js";
 
-// import STRINGCATALOG from "./strings.json" // strings
-function loadLanguage() {
-  let language = process.env.LANGUAGE || process.env.LANG || BASELANGUAGE; // this could be a banger
-}
+let CURRENTLANGUAGE = getLanguage() || BASE_LANGUAGE;
 
 let STRINGCATALOG = (() => {
   let data = fs.readFileSync("./strings.json");
@@ -16,12 +13,7 @@ let STRINGCATALOG = (() => {
 let unique_strings = {};
 
 const convertString = (string) => {
-  // console.log(STRINGCATALOG)
-  // console.log(string)
-
   unique_strings[string] = unique_strings[string] + 1 || 0;
-
-  // console.log(STRINGCATALOG.strings)
 
   if (!STRINGCATALOG.strings[string]) {
     console.log(`No string found for ${string}`);
@@ -50,7 +42,7 @@ const makeStringsDictionary = () => {
     version: "1.0",
   };
 
-  writeStringCatalog("LocalShit.xcstrings", finalStringCatalog);
+  writeStringCatalog("strings.json", finalStringCatalog);
 };
 
 export { convertString, CURRENTLANGUAGE, makeStringsDictionary };

@@ -45,5 +45,14 @@ const LANGUAGES = {
   uk: "Ukrainian",
   vi: "Vietnamese",
 };
+const BASE_LANGUAGE = "fr";
+const BASE_REVIEW_STATE = "needs_review";
 
-export { DEFAULT_INPUT_FILE, VALID_MODELS, SUPPORTED_TRANSLATIONS, LANGUAGES };
+export {
+  DEFAULT_INPUT_FILE,
+  VALID_MODELS,
+  SUPPORTED_TRANSLATIONS,
+  LANGUAGES,
+  BASE_LANGUAGE,
+  BASE_REVIEW_STATE,
+};

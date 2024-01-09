@@ -1,5 +1,11 @@
-import { SUPPORTED_TRANSLATIONS } from "./consts.js";
+import { SUPPORTED_TRANSLATIONS, BASE_LANGUAGE } from "./consts.js";
 
+import path from "path";
+import os from "os";
+
+const CONFIG_PATH = path.join(os.homedir(), ".tranzlate");
+
+// Setters
 const conditionallySetLanguage = () => {
   if (process.argv.length < 3) return;
   if (process.argv[0] !== "set-language") return;
@@ -9,4 +15,10 @@ const conditionallySetLanguage = () => {
   process.exit(0);
 };
 
-export { conditionallySetLanguage };
+// Getters
+const getLanguage = () => {
+  // should load the configuration file if it exists else default to the standard file
+  return "fr";
+};
+
+export { conditionallySetLanguage, getLanguage };

@@ -1,10 +1,10 @@
 import OpenAI from "openai";
 
 import { readFileSync, writeFileSync } from "fs";
-import { globSync } from "glob";
 
-import { LANGUAGES } from "./consts.js";
+import { LANGUAGES, BASE_REVIEW_STATE } from "./consts.js";
 
+// MAKE prompt should be made internationizable, but this needs to hapen later
 const makePrompt = ({
   projectDescription,
   comment,
@@ -29,8 +29,16 @@ const readStringCatalog = (path) => {
 };
 
 const writeStringCatalog = (path, obj) => {
-  let stringData = JSON.stringify(obj, null, 4);
-  writeFileSync(path, stringData);
+  let jsonString = JSON.stringify(obj, null, 2);
+
+  let formattedJson = jsonString
+    .split("\n")
+    .map((line) => {
+      return line.replace(/:\s+/g, " : ");
+    })
+    .join("\n");
+
+  writeFileSync(path, formattedJson);
 };
 
 const multiTranslate = async ({
@@ -89,12 +97,14 @@ const getCompletion = async ({
     ],
   });
 
+  // TODO: introduce some error handling here
+
   let response = gptResponse.choices[0].message.content;
   return response;
 };
 
 let openai, completionModel;
-let review_state = "needs_review";
+let review_state = BASE_REVIEW_STATE;
 
 const translate = async ({
   inputFile,
@@ -105,9 +115,6 @@ const translate = async ({
   apiKey,
   state,
 }) => {
-  // read the source
-  let files = globSync(inputFile) || [inputFile];
-
   let stringCatalog = readStringCatalog(inputFile); // TODO: make this support multiple files with glob
   let sourceLanguage = stringCatalog.sourceLanguage;
   let strings = stringCatalog.strings;
