@@ -44,7 +44,6 @@ const makeStringsDictionary = () => {
     strings[string] = {}; // empty object
   }
 
-  console.log(unique_strings);
   let finalStringCatalog = {
     strings: strings,
     sourceLanguage: "en",
