@@ -99,7 +99,7 @@ Then you will get an output like this, which takes you through the process of cr
 
 ### Multiple Languages
 
-![Language UI](https://user-images.githubusercontent.com/1784873/235330029-0a3b394c-d797-41d6-8717-9a6b487f1ae8.gif)
+https://github.com/wkaisertexas/tranzlate/assets/27795014/5ae6ca30-d030-4ec8-8c59-e2d1593084dc
 
 Because a translation utility only supporting a single language would be ironic, we support multiple languages. You can set your language by running:
 
