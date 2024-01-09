@@ -1,9 +1,9 @@
-<h2 align="center">
-   tranzlate
-</h2>
+<h1 align="center">
+   <strong>tranzlate</strong>
+</h1>
 
 <h4 align="center">
-   A CLI command which uses OpenAI to automatically translate your string catalogs
+   A CLI command which uses OpenAI to automatically translate <code>.xcstring</code> catalogs
 </h4>
 
 <br>
@@ -104,7 +104,7 @@ Then you will get an output like this, which takes you through the process of cr
 Because a translation utility only supporting a single language would be ironic, we support multiple languages. You can set your language by running:
 
 ```bash
-tranzlate set-language <language<
+tranzlate set-language <language>
 ```
 
 Where `<language>` is one of the following:
@@ -158,6 +158,12 @@ Anything beyond middle-school Spanish is lost on me. I believe the future of sof
 
 If you want to help fix a bug or implement a feature in [Issues](https://github.com/wkaisertexas/tranzlate), please do so. Swift development is somewhat new to me, so I would much appreciate community feedback.
 
+<a href="https://github.com/wkaisertexas/tranzlate/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wkaisertexas/tranzlate" />
+</a>
+
 ## Contributors
+
+![Alt](https://repobeats.axiom.co/api/embed/74c05a15a0f3020ab2d6113b7bd0667dbe4d1ad4.svg "Repobeats analytics image")
 
 > Thanks to the [ai-shell](https://github.com/BuilderIO/ai-shell) for letting me rip off their README template. After all, imitation is the sincerest form of flattery.
