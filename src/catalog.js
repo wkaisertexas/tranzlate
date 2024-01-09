@@ -1,14 +1,5 @@
 /// Used for translating string catalogs
-import {
-  intro,
-  select,
-  spinner,
-  outro,
-  isCancel,
-  cancel,
-  text,
-  multiselect,
-} from "@clack/prompts";
+import { intro, select, spinner, outro, text } from "@clack/prompts";
 
 import { gracefulExit, getAPIKey, getLanguages, getModel } from "./helpers.js";
 import colors from "picocolors";
