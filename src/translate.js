@@ -31,12 +31,13 @@ const readStringCatalog = (path) => {
 const writeStringCatalog = (path, obj) => {
   let jsonString = JSON.stringify(obj, null, 2);
 
-  let formattedJson = jsonString
-    .split("\n")
-    .map((line) => {
-      return line.replace(/:\s+/g, " : ");
-    })
-    .join("\n");
+  let formattedJson =
+    jsonString
+      .split("\n")
+      .map((line) => {
+        return line.replace(/:\s+/g, " : ").replace("{}", "{\n\n    }");
+      })
+      .join("\n") + "\n";
 
   writeFileSync(path, formattedJson);
 };
