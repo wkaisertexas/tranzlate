@@ -1,5 +1,5 @@
 <h1 align="center">
-   <strong>tranzlate</strong>
+   <img src="https://github.com/wkaisertexas/tranzlate/assets/27795014/2d8ab420-12de-422b-bfd2-b6a27bc936f7" alt="tranzlate logo"/>
 </h1>
 
 <h4 align="center">
