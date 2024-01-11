@@ -1,4 +1,4 @@
-import fs from "fs";
+import { readFileSync } from "fs";
 
 import { BASE_LANGUAGE } from "./consts.js";
 import { getLanguage } from "./config.js";
@@ -6,7 +6,7 @@ import { getLanguage } from "./config.js";
 let CURRENTLANGUAGE = getLanguage() || BASE_LANGUAGE;
 
 let STRINGCATALOG = (() => {
-  let data = fs.readFileSync("./strings.json");
+  let data = readFileSync("./strings.json");
   return JSON.parse(data);
 })();
 
@@ -45,4 +45,4 @@ const makeStringsDictionary = () => {
   writeStringCatalog("strings.json", finalStringCatalog);
 };
 
-export { convertString, CURRENTLANGUAGE, makeStringsDictionary };
+export { convertString, CURRENTLANGUAGE, STRINGCATALOG, makeStringsDictionary };

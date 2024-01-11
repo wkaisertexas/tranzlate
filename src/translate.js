@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync } from "fs";
 
 import { LANGUAGES, BASE_REVIEW_STATE } from "./consts.js";
 
-// MAKE prompt should be made internationizable, but this needs to hapen later
+// MAKE prompt should be made internationale, but this needs to happen later
 const makePrompt = ({
   projectDescription,
   comment,

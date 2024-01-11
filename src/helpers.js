@@ -2,7 +2,8 @@ import { isCancel, cancel, select, multiselect } from "@clack/prompts";
 
 import { convertString } from "./localization.js";
 
-import { VALID_MODELS, LANGUAGES } from "./consts.js";
+import { VALID_MODELS, LANGUAGES, SUPPORTED_TRANSLATIONS } from "./consts.js";
+import { setAPIKey, getAPIKeyFromConfig } from "./config.js";
 
 const gracefulExit = (input) => {
   if (!isCancel(input)) return;
@@ -43,6 +44,8 @@ const getAPIKey = async () => {
   let apiKey = process.env["OPENAI_API_KEY"];
 
   if (!process.env["OPENAI_API_KEY"]) {
+    if (getAPIKeyFromConfig()) return getAPIKeyFromConfig();
+
     apiKey = await text({
       message: convertString("Enter your OpenAI API key"),
       placeholder: "sk-1234567890",
@@ -54,13 +57,31 @@ const getAPIKey = async () => {
         }
       },
     });
-
-    // TODO: figure out if I should save the api key
   }
 
   gracefulExit(apiKey);
+  setAPIKey(apiKey);
 
   return apiKey;
 };
 
-export { gracefulExit, getModel, getLanguages, getAPIKey };
+const matchSupportedTranslations = (language) => {
+  let matching = SUPPORTED_TRANSLATIONS.map((supported_language) =>
+    String(supported_language).toLowerCase() === String(language).toLowerCase()
+      ? 0
+      : 1,
+  );
+  let index = matching.indexOf(0);
+
+  if (index === -1) return;
+
+  return SUPPORTED_TRANSLATIONS[index];
+};
+
+export {
+  gracefulExit,
+  getModel,
+  getLanguages,
+  getAPIKey,
+  matchSupportedTranslations,
+};
