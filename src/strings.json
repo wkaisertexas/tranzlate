@@ -7,7 +7,7 @@
           "value": "(gợi ý)",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "(建議)",
           "state": "needs_review"
         },
@@ -27,7 +27,7 @@
           "value": "(recomendado)",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "(推荐)",
           "state": "needs_review"
         },
@@ -67,7 +67,7 @@
           "value": "(susceptible aux erreurs)",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "(容易出錯的)",
           "state": "needs_review"
         },
@@ -75,7 +75,7 @@
           "value": "(오류가 있는)",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "(容易出错)",
           "state": "needs_review"
         },
@@ -119,7 +119,7 @@
           "value": "tranzlate: traducción automática de cadenas",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "tranzlate: 自動字串翻譯",
           "state": "needs_review"
         },
@@ -143,7 +143,7 @@
           "value": "트랜슬레이트: 자동 문자열 번역",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "翻译：tranzlate自动字符串翻译",
           "state": "needs_review"
         },
@@ -159,7 +159,7 @@
     },
     "Enter input file": {
       "localizations": {
-        "zh-CN": {
+        "zh-hans": {
           "value": "输入文件名",
           "state": "needs_review"
         },
@@ -203,7 +203,7 @@
           "value": "أدخل ملف الإدخال",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "輸入輸入檔案",
           "state": "needs_review"
         }
@@ -211,7 +211,7 @@
     },
     "Enter the output file": {
       "localizations": {
-        "zh-CN": {
+        "zh-hans": {
           "value": "输入输出文件",
           "state": "needs_review"
         },
@@ -243,7 +243,7 @@
           "value": "Nhập tệp đầu ra",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "輸入輸出文件",
           "state": "needs_review"
         },
@@ -267,7 +267,7 @@
           "value": "번역할 언어 선택하기.",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "选择要翻译成的语言。",
           "state": "needs_review"
         },
@@ -299,7 +299,7 @@
           "value": "Selecciona los idiomas a los que quieres traducir.",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "選擇要翻譯的語言。",
           "state": "needs_review"
         },
@@ -315,7 +315,7 @@
     },
     "Select a model": {
       "localizations": {
-        "zh-CN": {
+        "zh-hans": {
           "value": "选择一个模型",
           "state": "needs_review"
         },
@@ -347,7 +347,7 @@
           "value": "Selecionar um modelo",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "選擇一個模型",
           "state": "needs_review"
         },
@@ -367,7 +367,7 @@
     },
     "Enter a description of your project": {
       "localizations": {
-        "zh-CN": {
+        "zh-hans": {
           "value": "输入您的项目描述",
           "state": "needs_review"
         },
@@ -379,7 +379,7 @@
           "value": "Ingrese una descripción de su proyecto",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "輸入您的專案描述",
           "state": "needs_review"
         },
@@ -435,11 +435,11 @@
           "value": "Bu, çevirmene bağlam sağlamak için kullanılacak.",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "這將用於給翻譯者提供上下文。",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "这将用于给翻译者提供上下文。",
           "state": "needs_review"
         },
@@ -475,7 +475,7 @@
           "value": "Esta aplicación es una lista de tareas.",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "这个应用是一个任务清单应用。",
           "state": "needs_review"
         },
@@ -515,7 +515,7 @@
           "value": "هذا التطبيق هو تطبيق قائمة مهام.",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "這個應用程式是一個待辦清單應用程式。",
           "state": "needs_review"
         }
@@ -523,7 +523,7 @@
     },
     "Select the `state` of translated string keys": {
       "localizations": {
-        "zh-CN": {
+        "zh-hans": {
           "value": "选择已翻译字符串键的状态",
           "state": "needs_review"
         },
@@ -559,7 +559,7 @@
           "value": "حدد \"الحالة\" لمفاتيح النص المترجمة",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "選擇已翻譯字串鍵的狀態",
           "state": "needs_review"
         },
@@ -599,7 +599,7 @@
           "value": "ترجمة",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "翻译",
           "state": "needs_review"
         },
@@ -619,7 +619,7 @@
           "value": "Çeviri yapılıyor.",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "翻譯 (Fānyì)",
           "state": "needs_review"
         }
@@ -627,7 +627,7 @@
     },
     "Translation complete!": {
       "localizations": {
-        "zh-TW": {
+        "zh-hant": {
           "value": "翻译完成！",
           "state": "needs_review"
         },
@@ -643,7 +643,7 @@
           "value": "Tradução concluída!",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "翻译完成！",
           "state": "needs_review"
         },
@@ -683,7 +683,7 @@
           "value": "¡Gracias por usar Tranzlate!",
           "state": "needs_review"
         },
-        "zh-CN": {
+        "zh-hans": {
           "value": "感谢您使用Tranzlate！",
           "state": "needs_review"
         },
@@ -691,7 +691,7 @@
           "value": "Merci d'utiliser Tranzlate !",
           "state": "needs_review"
         },
-        "zh-TW": {
+        "zh-hant": {
           "value": "感謝您使用 Tranzlate！",
           "state": "needs_review"
         },

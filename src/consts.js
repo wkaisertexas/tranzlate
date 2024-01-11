@@ -1,13 +1,20 @@
-/// Where we store all the constants into the project
-
 const DEFAULT_INPUT_FILE = "Localizable.xcstrings";
 const VALID_MODELS = ["gpt-3.5-turbo", "gpt-4"];
-const SUPPORTED_TRANSLATIONS = ["en", "es", "fr", "de", "it", "pt", "ru", "zh"];
+const SUPPORTED_TRANSLATIONS = [
+  "en",
+  "es",
+  "fr",
+  "de",
+  "it",
+  "pt",
+  "ru",
+  "zh-Hans",
+];
 const LANGUAGES = {
   ar: "Arabic",
   ca: "Catalan",
-  "zh-CN": "Chinese (Simplified)",
-  "zh-TW": "Chinese (Traditional)",
+  "zh-Hans": "Chinese (Simplified)",
+  "zh-Hant": "Chinese (Traditional)",
   hr: "Croatian",
   cs: "Czech",
   da: "Danish",
@@ -45,7 +52,7 @@ const LANGUAGES = {
   uk: "Ukrainian",
   vi: "Vietnamese",
 };
-const BASE_LANGUAGE = "fr";
+const BASE_LANGUAGE = "zh-Hans";
 const BASE_REVIEW_STATE = "needs_review";
 
 export {
