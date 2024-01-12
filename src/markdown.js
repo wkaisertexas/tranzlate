@@ -24,8 +24,14 @@ import { LANGUAGES, VALID_MODELS } from "./consts.js";
 import color from "picocolors";
 
 const markdownTUI = async (fileGlob) => {
+  console.log(process.argv);
   if (fileGlob && process.argv.length < 3) return;
-  if (!fileGlob && process.argv[0] !== "markdown") return;
+  if (
+    !fileGlob &&
+    "markdown" !== process.argv[1] &&
+    "markdown" !== process.argv[2]
+  )
+    return;
 
   if (!fileGlob) {
     // this means the file glob has been called before
