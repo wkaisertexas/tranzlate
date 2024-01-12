@@ -45,4 +45,36 @@ const makeStringsDictionary = () => {
   writeStringCatalog("strings.json", finalStringCatalog);
 };
 
-export { convertString, CURRENTLANGUAGE, STRINGCATALOG, makeStringsDictionary };
+const expandStrings = (strings) => {
+  let readingFile = JSON.parse(readFileSync("./strings.json").toString());
+  let old_strings = Object.keys(readingFile.strings);
+
+  let new_strings = strings;
+
+  let final_strings = old_strings.concat(new_strings);
+
+  // use a set to remove duplicates
+  final_strings = [...new Set(final_strings)];
+
+  let strings_object = {};
+
+  for (let string of final_strings) {
+    strings_object[string] = {};
+  }
+
+  let finalStringCatalog = {
+    strings: strings_object,
+    sourceLanguage: "en",
+    version: "1.0",
+  };
+
+  writeStringCatalog("strings.json", finalStringCatalog);
+};
+
+export {
+  convertString,
+  CURRENTLANGUAGE,
+  STRINGCATALOG,
+  makeStringsDictionary,
+  expandStrings,
+};
