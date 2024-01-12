@@ -1,9 +1,9 @@
-import { conditionallySetLanguage } from "./config.js";
+import { conditionallySetLanguage } from "./configTUI.js";
 import { markdownTUI } from "./markdown.js";
 import { stringCatalogTUI } from "./catalog.js";
 
 /// Alternative paths
-conditionallySetLanguage();
+await conditionallySetLanguage();
 await markdownTUI();
 
 // String catalog translation
