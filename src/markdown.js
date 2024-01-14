@@ -10,10 +10,6 @@ import { globSync } from "glob";
 import {
   intro,
   select,
-  spinner,
-  outro,
-  isCancel,
-  cancel,
   text,
   multiselect,
 } from "@clack/prompts";
