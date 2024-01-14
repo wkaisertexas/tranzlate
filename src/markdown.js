@@ -104,14 +104,14 @@ const markdownTranslate = async ({ targetLanguages, source, glob }) => {
     files.map(async (file) => {
       await Promise.all(
         targetLanguages.map(async (targetLanguage) => {
-          return await tranzlateFileToLangauge({ targetLanguage, file });
+          return await translateFileToLanguage({ targetLanguage, file });
         }),
       );
     }),
   );
 };
 
-const tranzlateFileToLangauge = async ({ targetLanguage, file }) => {
+const translateFileToLanguage = async ({ targetLanguage, file }) => {
   let messages = [
     {
       content:
