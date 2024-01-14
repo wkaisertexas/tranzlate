@@ -1,22 +1,15 @@
-/// General parser for creating abbreviated readme files using ISO language codes
+// General parser for creating abbreviated README files using ISO language codes
 
-/// REF: ISO 639-1 Language codes
-/// https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+// REF: ISO 639-1 Language codes
+// https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+import { gracefulExit } from "./helpers.js";
+import { convertString } from "./localization.js";
+import { LANGUAGES, VALID_MODELS } from "./consts.js";
 
 import { readFileSync, writeFileSync } from "fs";
 import OpenAI from "openai";
 import { globSync } from "glob";
-
-import {
-  intro,
-  select,
-  text,
-  multiselect,
-} from "@clack/prompts";
-
-import { gracefulExit } from "./helpers.js";
-import { convertString } from "./localization.js";
-import { LANGUAGES, VALID_MODELS } from "./consts.js";
+import { intro, select, text, multiselect, spinner } from "@clack/prompts";
 import color from "picocolors";
 
 const markdownTUI = async (fileGlob) => {
@@ -43,10 +36,10 @@ const markdownTUI = async (fileGlob) => {
 
   // if the second argument is not a file, ask for the file
   fileGlob = fileGlob || process.argv[2];
-  if (process.argv[2] && process.argv[2].endsWith(".md")) {
+  if (!(process.argv[2] && process.argv[2].endsWith(".md"))) {
     fileGlob = await text({
       message: convertString("Enter a markdown file or glob"),
-      placeHolder: "./README.md",
+      placeholder: "./README.md",
       required: true,
     });
 
@@ -65,7 +58,7 @@ const markdownTUI = async (fileGlob) => {
 
   // Selecting the model
   let model = await select({
-    messsage: convertString("Select a model"),
+    message: convertString("Select a model"),
     options: VALID_MODELS.map((model) => ({
       value: model,
       label: model,
@@ -73,9 +66,9 @@ const markdownTUI = async (fileGlob) => {
   });
   gracefulExit(model);
 
-  let spinner = spinner();
+  let waitingSpinner = spinner();
 
-  spinner.start(
+  waitingSpinner.start(
     convertString("Translating (can take a while with long markdown files)"),
   );
 
@@ -85,7 +78,7 @@ const markdownTUI = async (fileGlob) => {
     glob: fileGlob,
   });
 
-  spinner.stop(convertString("Finished translating"));
+  waitingSpinner.stop(convertString("Finished translating"));
 
   process.exit(0);
 };
@@ -111,7 +104,9 @@ const translateFileToLanguage = async ({ targetLanguage, file }) => {
   let messages = [
     {
       content:
-        "You are a translation agent who is translating a markdown file. Into another language. Do not translate any code or langauge specific file names or urls.",
+        `You are a translation agent who is translating a markdown file. 
+        Into another language.
+        Do not translate any code or language specific file names or urls.`,
       role: "system",
     },
     {
