@@ -1,9 +1,8 @@
 import { LANGUAGES, SUPPORTED_TRANSLATIONS } from "./consts.js";
 import { gracefulExit, matchSupportedTranslations } from "./helpers.js";
-
 import { setLanguage } from "./config.js";
-
 import { convertString } from "./localization.js";
+
 import { intro, select, outro } from "@clack/prompts";
 
 import colors from "picocolors";
