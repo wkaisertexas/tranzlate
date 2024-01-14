@@ -1,8 +1,8 @@
 {
   "name": "tranzlate.js",
   "version": "1.0.1",
-  "description": "Make all App-Store compatible languages into string catalogs",
-  "main": "index.js",
+  "description": "Translate your string catalogs to any language | 将您的字符串目录翻译成任何语言 | Traduzca sus catálogos de cadenas a cualquier idioma | Traduisez vos catalogues de chaînes dans n'importe quelle langue",
+  "main": "./src/index.js",
   "type": "module",
   "scripts": {
     "start": "jiti ./src/index.js",
