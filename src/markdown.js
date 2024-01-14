@@ -1,4 +1,4 @@
-/// General parser for creating abreviated readme files using ISO language codes
+/// General parser for creating abbreviated readme files using ISO language codes
 
 /// REF: ISO 639-1 Language codes
 /// https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
