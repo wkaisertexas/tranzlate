@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-   A CLI command which uses OpenAI to automatically translate <code>.xcstring</code> catalogs
+   A CLI command which uses OpenAI APIs to automatically translate <code>.xcstring</code> catalogs
 </h4>
 
 <br>
@@ -129,7 +129,7 @@ Where `<language>` is one of the following:
     <tr><td>Ukrainian</td><td>uk</td></tr>
     <tr><td>Vietnamese</td><td>vi</td></tr>
     <tr><td>Arabic</td><td>ar</td></tr>
-    <tr><td>Portuguese</td><td>pt</td></tr>
+    <tr><td>Portuguese</td><td>pt-BR</td></tr>
     <tr><td>Turkish</td><td>tr</td></tr>
   </tbody>
 </table>
