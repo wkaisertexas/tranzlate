@@ -14,6 +14,17 @@
   <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.de.md"><strong>German</strong></a>
 </p>
 
+<p align="center">
+  <a href="#setup"><strong>Setup</strong></a> ·
+  <a href="#usage"><strong>Usage</strong></a> ·
+  <a href="#setting-language"><strong>Setting Language</strong></a> ·
+  <a href="#markdown"><strong>Markdown</string></a> ·
+  <a href="#common-issues"><strong>Common Issues</strong></a> ·
+  <a href="#motivation"><strong>Motivation</string></a> ·
+  <a href="#contributing"><strong>Contributing</strong></a> ·
+    <a href="#contributors"><strong>Contributors</strong></a>
+</p>
+
 https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b792-e47949c5b373
 
 <br>
@@ -102,7 +113,7 @@ Then you will get an output like this, which takes you through the process of cr
 └  ◻ Vietnamese
 ```
 
-### Multiple Languages
+### Setting Language
 
 https://github.com/wkaisertexas/tranzlate/assets/27795014/5ae6ca30-d030-4ec8-8c59-e2d1593084dc
 
