@@ -29,8 +29,6 @@ const setAPIKey = (key) => {
 
 const saveConfig = () => {
   let stringConfig = ini.stringify(config);
-  console.log(config);
-  console.log(stringConfig);
   writeFileSync(CONFIG_PATH, stringConfig);
 };
 

@@ -24,7 +24,6 @@ import { LANGUAGES, VALID_MODELS } from "./consts.js";
 import color from "picocolors";
 
 const markdownTUI = async (fileGlob) => {
-  console.log(process.argv);
   if (fileGlob && process.argv.length < 3) return;
   if (
     !fileGlob &&
@@ -113,7 +112,6 @@ const markdownTranslate = async ({ targetLanguages, source, glob }) => {
 };
 
 const tranzlateFileToLangauge = async ({ targetLanguage, file }) => {
-  console.log(readFileSync(file));
   let messages = [
     {
       content:
