@@ -6,7 +6,13 @@
    A CLI command which uses OpenAI APIs to automatically translate <code>.xcstring</code> catalogs
 </h4>
 
-<br>
+<p align="center">
+  <a href="https://github.com/wkaisertexas/tranzlate"><strong>English</strong></a> ·
+  <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.zh-Hans.md"><strong>Chinese Simplified</strong></a> ·
+  <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.fr.md"><strong>French</strong></a> ·
+  <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.es.md"><strong>Spanish</string></a> ·
+  <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.de.md"><strong>German</strong></a>
+</p>
 
 https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b792-e47949c5b373
 
@@ -93,8 +99,7 @@ Then you will get an output like this, which takes you through the process of cr
 │  ◻ Thai
 │  ◻ Turkish
 │  ◼ Ukrainian
-│  ◻ Vietnamese
-└
+└  ◻ Vietnamese
 ```
 
 ### Multiple Languages
@@ -163,7 +168,7 @@ This will prompt you for a markdown glob to translate. The ISO language code wil
 │
 ◇  Select a model
 │  gpt-3.5-turbo
-◇  Translating README.md...
+◆  Translating README.md...
 ```
 
 > Markdown translation is currently a beta feature and untested. Please report any issues you encounter.
