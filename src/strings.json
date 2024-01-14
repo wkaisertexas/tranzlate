@@ -1,32 +1,1566 @@
 {
-  "strings": {
-    "(recommended)": {},
-    "(error-prone)": {},
-    " tranzlate : automatic string translation ": {},
-    "Enter input file": {},
-    "Enter the output file": {},
-    "Select languages to translate to.": {},
-    "Select a model": {},
-    "Enter a description of your project": {},
-    "This will be used to give context to the translator.": {},
-    "This app is a todo list app.": {},
-    "Select the `state` of translated string keys": {},
-    "Translating": {},
-    "Translation complete!": {},
-    "Thanks for using Tranzlate!": {},
-    "Thank you for using Translate!": {},
-    "Input file must end with .xcstrings": {},
-    "Translation cancelled": {},
-    "Enter your OpenAI API key": {},
-    "API key must start with sk-": {},
-    " tranzlate : default language selection": {},
-    "Select a language to set as your default language": {},
-    " tranzlate : automatic markdown translation ": {},
-    "Enter a markdown file or glob": {},
-    "Select languages to translate to": {},
-    "Translating (can take a while with long markdown files)": {},
-    "Finished translating": {}
+  "sourceLanguage" : "en",
+  "strings" : {
+    "(recommended)" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "value" : "(建議)",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "(推荐)",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "(recommandé)",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "(giới thiệu)",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "(recomendado)",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "(empfohlen)",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "(recommended)",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "(recomendado)",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "(önerilen)",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined : (recommended)",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "(추천됨)",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "(مُوصَى به)",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "(рекомендовано)",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "(рекомендуется)",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "(error-prone)" : {
+      "localizations" : {
+        "en" : {
+          "value" : "Error-prone",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "(\"propenso a errores\")",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "(容易出错)",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "(具有错误的)",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "(오류가 발생하기 쉬운)",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "(fehleranfällig)",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "(hatalı eğilimli)",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "(dễ mắc lỗi)",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "(подверженный ошибкам)",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "(عرضة للأخطاء)",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "(com propensão a erros)",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "(пов'язаний з помилками)",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "(susceptible aux erreurs)",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "I'm sorry, but I cannot perform the translation as the target language \"undefined\" is not specified. Could you please provide the specific target language for the translation?",
+          "state" : "needs_review"
+        }
+      }
+    },
+    " tranzlate  : automatic string translation " : {
+      "localizations" : {
+        "en" : {
+          "value" : "tranzlate  : automatic string translation",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "tranzlate：自動字串翻譯",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Tranzlate : automatische Zeichenkettenübersetzung",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "tranzlate  : otomatik string çevirisi",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "tranzlate：自动字符串翻译",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Транслэйт : автоматический перевод строк",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "tranzlate  : traducción automática de cadenas de texto",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "tranzlate  : tradução automática de strings",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "tranzlate : dịch tự động chuỗi ký tự",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "tranzlate  : traduction automatique des chaînes de caractères",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "트랜슬레이트 : 자동 문자열 번역",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Транзляція : автоматичний переклад рядків",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "ترانزليت : ترجمة سلسلة نصية آلية",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined : tranzlate : автоматический перевод строк",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Enter input file" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "value" : "请输入输入文件",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "strings.txt",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Enter input file",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Enter input file",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "입력 파일을 입력하세요.",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Nhập tệp tin đầu vào",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Giriş dosyasını girin.",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Введите входной файл",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Entrez le nom du fichier d'entrée",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Введіть вхідний файл",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Geben Sie die Eingabedatei ein",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Please enter the path to your input file.",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "أدخل ملف الإدخال",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "請輸入輸入檔案",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Enter the output file" : {
+      "localizations" : {
+        "es" : {
+          "value" : "translations_es.txt",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "输入输出文件",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Enter the output file",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Введите имя выходного файла",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Entrez le fichier de sortie",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "출력 파일을 입력하세요",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Введіть файл виводу",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çıktı dosyasını girin",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Geben Sie den Ausgabedateinamen ein",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Nhập tệp đầu ra",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "輸入輸出文件名：",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "أدخل ملف الإخراج",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Por favor, informe o nome do arquivo de saída:",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "ציין את קובץ הפלט",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Select languages to translate to." : {
+      "localizations" : {
+        "es" : {
+          "value" : "Spanish (Spain)",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Выберите языки для перевода.",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Виберіть мови для перекладу.",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역할 언어를 선택하세요.",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çevrilecek dilleri seçin.",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "选择要翻译的语言。",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Select the languages you want to translate into.",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Sprachen zum Übersetzen auswählen.",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Selecione os idiomas para traduzir para.",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation to undefined : Please select the languages you want to translate to.",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Sélectionnez les langues à traduire.",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Chọn ngôn ngữ để dịch đến.",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "選擇要翻譯的語言。",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "اختر اللغات التي ترغب في ترجمتها.",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Select a model" : {
+      "localizations" : {
+        "es" : {
+          "value" : "Selecciona un modelo",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Select a model",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Select a model",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Виберіть модель",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "选择一个模型",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Выберите модель",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Chọn một mẫu",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Sélectionnez un modèle",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Selecionar um modelo",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Wählen Sie ein Modell",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Bir model seçin.",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "選擇一個模型",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "اختر نموذجا",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "모델을 선택하세요.",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Enter a description of your project" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "value" : "输入您的项目描述",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Introduce una descripción de tu proyecto",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Enter a description of your project",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Insira uma descrição do seu projeto",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Entrez une description de votre projet",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined:",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Bir proje açıklaması girin",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Geben Sie eine Beschreibung Ihres Projekts ein",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Введите описание вашего проекта",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "請輸入您的專案描述",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Введіть опис вашого проекту",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Nhập mô tả dự án của bạn",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "프로젝트에 대한 설명을 입력하세요.",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "أدخل وصفًا لمشروعك",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "This will be used to give context to the translator." : {
+      "localizations" : {
+        "en" : {
+          "value" : "This will be used to give context to the translator.",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Isso será usado para fornecer contexto ao tradutor.",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Esto se utilizará para dar contexto al traductor.",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "This will be used to give context to the translator.",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Cela sera utilisé pour donner du contexte au traducteur.",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Bu, çevirmene bağlam sağlamak için kullanılacak.",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Это будет использоваться для обеспечения контекста переводчику.",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "这将用于给翻译人员提供上下文。",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "這將用於給翻譯者提供上下文。",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Це буде використовуватися для надання контексту перекладачу.",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Dies wird verwendet, um dem Übersetzer einen Kontext zu geben.",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "هذا سيستخدم لإعطاء سياق للمترجم.",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역은 번역가에게 맥락을 제공하기 위해 사용될 것입니다.",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Điều này sẽ được sử dụng để cung cấp bối cảnh cho người dịch.",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "This app is a todo list app." : {
+      "localizations" : {
+        "es" : {
+          "value" : "Esta aplicación es una lista de tareas.",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "This app is a todo list app.",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Cette application est une application de liste de tâches.",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Это приложение - список дел.",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Diese App ist eine Aufgabenliste-App.",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "这个应用是一个待办事项列表应用。",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "이 앱은 할 일 목록 앱입니다.",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Este aplicativo é um aplicativo de lista de tarefas.",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Цей додаток - це додаток для списку справ.",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Bu uygulama bir yapılacaklar listesi uygulamasıdır.",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "هذا التطبيق هو تطبيق قائمة مهام.",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "This app is a todo list app.",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Ứng dụng này là một ứng dụng danh sách công việc.",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "這個應用程式是一個待辦清單應用程式。",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Select the `state` of translated string keys" : {
+      "localizations" : {
+        "en" : {
+          "value" : "Select the `state` of translated string keys",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "选择翻译字符串键的状态",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Selecciona el `estado` de las claves de cadenas traducidas",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Выберите `state` переведенных строковых ключей",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Sélectionnez l'état des clés de chaîne traduites",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역된 문자열 키의 `상태`를 선택하세요.",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Selecione o `estado` das chaves de strings traduzidas",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "選擇翻譯字符串密鑰的狀態",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Wählen Sie den `Status` der übersetzten Zeichenketten-Schlüssel aus",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Chọn `trạng thái` của các khóa dịch chuỗi",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çevrilen dizin anahtarlarının `durumunu` seçin",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Виберіть «стан» перекладених ключів рядків",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "اختر \"الحالة\" لمفاتيح النص المترجمة",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "نختار \"state\" من مفاتيح السلاسل المترجمة.",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Translating" : {
+      "localizations" : {
+        "es" : {
+          "value" : "Traducción",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Traduzindo",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Translating",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Перевод",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Übersetzung",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Traduction",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역 중",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "翻译",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "翻譯",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çeviri yapılıyor.",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "ترجمة",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Переклад",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Dịch sang tiếng Việt : Dịch",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined : Translating",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Translation complete!" : {
+      "localizations" : {
+        "fr" : {
+          "value" : "Traduction terminée !",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Tradução completa!",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Translation from English to Spanish (Spain):",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Dịch đã hoàn thành!",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역 완료!",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "翻譯完成！",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "翻译完成！",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Tamamlanmış çeviri!",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Übersetzung abgeschlossen!",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Перевод завершен!",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Переклад завершений!",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Translation from English to English : Translation complete!",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined : Translation complete!",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "الترجمة كاملة!",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Thanks for using Tranzlate!" : {
+      "localizations" : {
+        "pt-BR" : {
+          "value" : "Obrigado por usar o Tranzlate!",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "感谢使用Tranzlate！",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Thanks for using Tranzlate!",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Danke, dass Sie Tranzlate nutzen!",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "感謝使用Tranzlate！",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Thanks for using Tranzlate!",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "¡Gracias por usar Tranzlate!",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Merci d'utiliser Tranzlate !",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Спасибо за использование Tranzlate!",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "Tranzlate를 사용해주셔서 감사합니다!",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Cám ơn bạn đã sử dụng Tranzlate!",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Дякуємо за використання Tranzlate!",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Tranzlate'i kullanmaktan dolayı teşekkürler!",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "شكراً لاستخدامك ترانزليت!",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Thank you for using Translate!" : {
+      "localizations" : {
+        "en" : {
+          "value" : "Thank you for using Translate!",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Thank you for using Translate!",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "¡Gracias por usar Translate!",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Merci d'utiliser Translate !",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Danke, dass Sie Translate verwenden!",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "谢谢您使用Translate！",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Cám ơn bạn đã sử dụng Translate!",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "Translate를 사용해 주셔서 감사합니다!",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Спасибо, что используете Транслейт!",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "謝謝您使用翻譯！",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Obrigado por usar o Translate!",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Дякуємо за використання Translate!",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çeviri kullanımınız için teşekkür ederim!",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "شكرًا لاستخدامك للترجمة!",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Input file must end with .xcstrings" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "value" : "输入文件必须以 .xcstrings 结尾",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Archivo de entrada debe terminar con .xcstrings",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Dosya .xcstrings ile bitmelidir.",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Die Eingabedatei muss mit .xcstrings enden",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Dosya uzantısı .xcstrings ile bitmelidir.",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Arquivo de entrada deve terminar com .xcstrings",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Le fichier d'entrée doit se terminer par .xcstrings",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "입력 파일은 .xcstrings로 끝나야 합니다.",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Translation from English to English : Input file must end with .xcstrings",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "輸入文件必須以 .xcstrings 結尾",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Файл ввода должен оканчиваться на .xcstrings",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Tệp đầu vào phải kết thúc bằng .xcstrings",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Вхідний файл повинен закінчуватися на .xcstrings",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "الملف الإدخال يجب أن ينتهي بـ .xcstrings",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Translation cancelled" : {
+      "localizations" : {
+        "en" : {
+          "value" : "Translation cancelled",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Переклад скасовано",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Dịch bị hủy bỏ",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Traducción cancelada",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Tradução cancelada",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "翻译已取消",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Перевод отменен",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çeviri iptal edildi",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Traduction annulée",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Übersetzung abgebrochen",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined : Translation cancelled",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역이 취소되었습니다",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "翻譯取消",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "تم إلغاء الترجمة",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Enter your OpenAI API key" : {
+      "localizations" : {
+        "en" : {
+          "value" : "Enter your OpenAI API key",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Введите ваш ключ API OpenAI",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Enter your OpenAI API key",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Introduce tu clave de API de OpenAI",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Digite sua chave de API do OpenAI",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Введіть ваш ключ API OpenAI",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Nhập khóa API OpenAI của bạn",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "输入您的OpenAI API密钥",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Geben Sie Ihren OpenAI API-Schlüssel ein",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "輸入您的OpenAI API金鑰",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "OpenAI API anahtarınızı girin",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "오픈AI API 키를 입력하세요",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "أدخل مفتاح API الخاص بـ OpenAI",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Entrez votre clé d'API OpenAI",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "API key must start with sk-" : {
+      "localizations" : {
+        "en" : {
+          "value" : "API key must start with sk-",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Clé API doit commencer par sk-",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "API key must start with sk-",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Ключ API должен начинаться с sk-",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "A chave de API deve começar com sk-",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "API-Schlüssel muss mit sk- beginnen",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "API金鑰必須以sk-開頭",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "API密钥必须以sk-开头。",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "API anahtarı sk- ile başlamalıdır.",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "API 키는 sk-로 시작해야 합니다.",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "La clave de API debe comenzar con sk-",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Ключ API повинен починатися з sk-",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "يجب أن يبدأ مفتاح API بـ sk-",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Khóa API phải bắt đầu bằng sk-",
+          "state" : "needs_review"
+        }
+      }
+    },
+    " tranzlate  : default language selection" : {
+      "localizations" : {
+        "en" : {
+          "value" : "tranzlate  : default language selection",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "tranzlate : 默认语言选择",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "tranzlate : Standardsprachenauswahl",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "tranzlate  : sélection de la langue par défaut",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "tranzlate : seleção de idioma padrão",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "tranzlate  : sélection de la langue par défaut",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "tranzlate : selección de idioma predeterminado",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "tranzlate : varsayılan dil seçimi",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "트랜슬레이트 : 기본 언어 선택",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "tranzlate : lựa chọn ngôn ngữ mặc định",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "tranzlate：默認語言選擇",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "tranzlate : выбор языка по умолчанию",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "ترجمة : اختيار اللغة الافتراضية",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "tranzlate  : вибір мови за замовчуванням",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Select a language to set as your default language" : {
+      "localizations" : {
+        "jp" : {
+          "value" : "Select a language to set as your default language",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "选择一个语言作为您的默认语言",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Selecione um idioma para definir como idioma padrão",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Sélectionnez une langue à définir comme langue par défaut",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Select a language to set as your default language",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Selecciona un idioma para establecer como tu idioma predeterminado",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "기본 언어로 설정할 언어를 선택하세요.",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Wählen Sie eine Sprache aus, um sie als Ihre Standardsprache festzulegen",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Varsayılan dilinizi ayarlamak için bir dil seçin",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "選擇一種語言作為您的默認語言",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "اختر اللغة لتعيينها كلغة افتراضية",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Выберите язык, который будет задан в качестве языка по умолчанию",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Chọn một ngôn ngữ để đặt làm ngôn ngữ mặc định của bạn",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Виберіть мову, яку ви хочете встановити як свою основну мову",
+          "state" : "needs_review"
+        }
+      }
+    },
+    " tranzlate  : automatic markdown translation " : {
+      "localizations" : {
+        "fr" : {
+          "value" : "tranzlate  : traduction automatique du markdown",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "tranzlate : tradução automática de markdown",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "tranzlate  : automatic markdown translation",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "tranzlate : dịch tự động markdown",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "tranzlate : автоматический перевод Markdown",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "tranzlate : otomatik markdown çevirisi",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "tranzlate : traducción automática de markdown",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "tranzlate：自動 Markdown 翻譯",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined : tranzlate : automatik markdown übersetzung",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "tranzlate : 自动Markdown翻译",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "tranzlate  : автоматичний переклад markdown",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "tranzlate  : automatische Markdown-Übersetzung",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "추 번역 : 자동 마크다운 번역",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "ترانزلات : ترجمة تلقائية للعلامات التشعبية",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Enter a markdown file or glob" : {
+      "localizations" : {
+        "pt-BR" : {
+          "value" : "Informe um arquivo markdown ou glob",
+          "state" : "needs_review"
+        },
+        "en" : {
+          "value" : "Enter a markdown file or glob",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Entrez un fichier markdown ou un glob",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Nhập tệp markdown hoặc glob",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "输入一个 markdown 文件或者通配符",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "输入一个markdown文件或者glob",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Bir Markdown dosyası veya glob girin",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "أدخل ملف markdown أو glob",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Введіть файл markdown або шаблон",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Введите файл в формате Markdown или шаблон",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "마크다운 파일 또는 glob을 입력하세요.",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Geben Sie eine Markdown-Datei oder einen Dateipfad (Glob) ein",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "請輸入一個 markdown 檔案或樣式匹配模式",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "No se ha proporcionado ningún archivo o patrón de archivo válido. Por favor, introduce un archivo markdown o un patrón válido.",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Select languages to translate to" : {
+      "localizations" : {
+        "en" : {
+          "value" : "Select languages to translate to",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çevrilecek dilleri seçin",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Выберите языки для перевода",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Please provide the string that you would like to translate.",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Оберіть мови для перекладу",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "选择要翻译成的语言",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Sélectionnez les langues à traduire vers",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "選擇要翻譯的語言",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Wählen Sie die zu übersetzenden Sprachen aus",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역할 언어를 선택하세요",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined : Sélectionnez les langues vers lesquelles traduire",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Lựa chọn ngôn ngữ để dịch",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "اختر اللغات التي ترغب في الترجمة إليها",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Please choose the languages you want to translate from English to:\n\n1. Spanish\n2. French\n3. German\n4. Italian\n5. Portuguese (Brazil)\n",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Translating (can take a while with long markdown files)" : {
+      "localizations" : {
+        "en" : {
+          "value" : "Translating (can take a while with long markdown files)",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Translation from English to undefined : Translating (can take a while with long markdown files)",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Traduzindo (pode demorar um pouco com arquivos markdown longos)",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Traducción en curso (puede tardar un tiempo con archivos de markdown largos)",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "翻譯中（處理長篇的 Markdown 文件可能需要一些時間）",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Traduction du texte (prend du temps avec de longs fichiers markdown)",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Übersetzung (kann mit langen Markdown-Dateien eine Weile dauern)",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Đang dịch (có thể mất thời gian với các tệp markdown dài)",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역 중입니다 (긴 마크다운 파일의 경우 시간이 걸릴 수 있습니다)",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "翻译中（翻译长篇标记文件可能需要一些时间）",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çeviri yapılıyor (uzun markdown dosyalarıyla biraz zaman alabilir)",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Перевод (может занять некоторое время для длинных файлов в формате Markdown)",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Перекладання (може зайняти тривалий час з великими файлами у форматі Markdown)",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "ترجمة (قد يستغرق بعض الوقت مع ملفات الترميز الطويلة)",
+          "state" : "needs_review"
+        }
+      }
+    },
+    "Finished translating" : {
+      "localizations" : {
+        "en" : {
+          "value" : "Finished translating",
+          "state" : "needs_review"
+        },
+        "ru" : {
+          "value" : "Завершено переводить",
+          "state" : "needs_review"
+        },
+        "ar" : {
+          "value" : "انتهاء الترجمة",
+          "state" : "needs_review"
+        },
+        "pt-BR" : {
+          "value" : "Finalizou a tradução",
+          "state" : "needs_review"
+        },
+        "jp" : {
+          "value" : "Finished translating",
+          "state" : "needs_review"
+        },
+        "zh-Hant" : {
+          "value" : "完成翻譯",
+          "state" : "needs_review"
+        },
+        "ko" : {
+          "value" : "번역 완료",
+          "state" : "needs_review"
+        },
+        "zh-Hans" : {
+          "value" : "翻译完成",
+          "state" : "needs_review"
+        },
+        "fr" : {
+          "value" : "Traduction en français  : Traduction terminée",
+          "state" : "needs_review"
+        },
+        "uk" : {
+          "value" : "Завершено перекладення",
+          "state" : "needs_review"
+        },
+        "tr" : {
+          "value" : "Çeviri tamamlandı.",
+          "state" : "needs_review"
+        },
+        "es" : {
+          "value" : "Traducción de inglés a español (España) : Traducción finalizada",
+          "state" : "needs_review"
+        },
+        "vi" : {
+          "value" : "Kết thúc dịch",
+          "state" : "needs_review"
+        },
+        "de" : {
+          "value" : "Fertig übersetzen",
+          "state" : "needs_review"
+        }
+      }
+    }
   },
-  "sourceLanguage": "en",
-  "version": "1.0"
+  "version" : "1.0"
 }
