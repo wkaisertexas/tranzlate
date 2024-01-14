@@ -2,13 +2,9 @@ import { readFileSync } from "fs";
 
 import { BASE_LANGUAGE } from "./consts.js";
 import { getLanguage } from "./config.js";
+import STRINGCATALOG from "./strings.json" assert { type: "json" };
 
 let CURRENTLANGUAGE = getLanguage() || BASE_LANGUAGE;
-
-let STRINGCATALOG = (() => {
-  let data = readFileSync("./strings.json");
-  return JSON.parse(data);
-})();
 
 let unique_strings = {};
 
