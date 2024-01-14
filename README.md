@@ -121,7 +121,7 @@ Where `<language>` is one of the following:
     <tr><td>Simplified Chinese</td><td>zh-Hans</td></tr>
     <tr><td>Traditional Chinese</td><td>zh-Hant</td></tr>
     <tr><td>Spanish</td><td>es</td></tr>
-    <tr><td>Japanese</td><td>jp</td></tr>
+    <tr><td>Japanese</td><td>ja</td></tr>
     <tr><td>Korean</td><td>ko</td></tr>
     <tr><td>French</td><td>fr</td></tr>
     <tr><td>German</td><td>de</td></tr>
@@ -141,6 +141,32 @@ tranzlate set-language zh-Hans
 ```
 
 This will set your language to Simplified Chinese.
+
+## Markdown 
+
+Because markdown is a common format for documentation, support for markdown is included. To go into markdown mode, run:
+
+```sh
+tranzlate markdown
+```
+
+This will prompt you for a markdown glob to translate. The ISO language code will be appended to the end of each file name. For instance, if you translate `README.md` to Simplified Chinese, the output file will be `README.zh-Hans.md`.
+
+```console
+┌   tranzlate: automatic markdown translation 
+│
+◇  Enter a markdown file or glob
+│  ./README.md
+│
+◇  Select languages to translate to
+│  fi - Finnish, hu - Hungarian, pl - Polish, ru - Russian
+│
+◇  Select a model
+│  gpt-3.5-turbo
+◇  Translating README.md...
+```
+
+> Markdown translation is currently a beta feature and untested. Please report any issues you encounter.
 
 ## Common Issues
 

@@ -2,13 +2,19 @@ const DEFAULT_INPUT_FILE = "Localizable.xcstrings";
 const VALID_MODELS = ["gpt-3.5-turbo", "gpt-4"];
 const SUPPORTED_TRANSLATIONS = [
   "en",
+  "zh-Hans",
+  "zh-Hant",
   "es",
+  "ja",
+  "ko",
   "fr",
   "de",
-  "it",
-  "pt",
   "ru",
-  "zh-Hans",
+  "uk",
+  "vi",
+  "ar",
+  "pt-BR",
+  "tr",
 ];
 const LANGUAGES = {
   ar: "Arabic",
