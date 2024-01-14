@@ -52,7 +52,7 @@ const LANGUAGES = {
   uk: "Ukrainian",
   vi: "Vietnamese",
 };
-const BASE_LANGUAGE = "zh-Hans";
+const BASE_LANGUAGE = "en";
 const BASE_REVIEW_STATE = "needs_review";
 
 export {
