@@ -1,6 +1,6 @@
 {
   "name": "tranzlate.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make all App-Store compatible languages into string catalogs",
   "main": "index.js",
   "type": "module",
