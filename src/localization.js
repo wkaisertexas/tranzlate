@@ -12,12 +12,12 @@ const convertString = (string) => {
   unique_strings[string] = unique_strings[string] + 1 || 0;
 
   if (!STRINGCATALOG.strings[string]) {
-    console.log(`No string found for ${string}`);
+    // console.log(`No string found for ${string}`);
     return string;
   }
 
   if (!STRINGCATALOG.strings[string].localizations[CURRENTLANGUAGE]) {
-    console.log(`No translation found for ${string} in ${CURRENTLANGUAGE}`);
+    // console.log(`No translation found for ${string} in ${CURRENTLANGUAGE}`);
     return string;
   }
 
