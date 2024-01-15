@@ -44,6 +44,10 @@ const markdownTUI = async (fileGlob) => {
     });
 
     gracefulExit(fileGlob);
+
+    if(!fileGlob) {
+      fileGlob = "./README.md"
+    }
   }
 
   // Selecting the languages
@@ -65,6 +69,8 @@ const markdownTUI = async (fileGlob) => {
     })),
   });
   gracefulExit(model);
+  
+  model = model || VALID_MODELS[0]
 
   let waitingSpinner = spinner();
 
@@ -75,6 +81,7 @@ const markdownTUI = async (fileGlob) => {
   // translate the file
   await markdownTranslate({
     targetLanguages: languages,
+    model: model,
     glob: fileGlob,
   });
 
@@ -84,28 +91,30 @@ const markdownTUI = async (fileGlob) => {
 };
 
 let openai;
-const markdownTranslate = async ({ targetLanguages, source, glob }) => {
+const markdownTranslate = async ({ targetLanguages, model, glob }) => {
   openai = new OpenAI();
 
-  let files = globSync(glob) || [glob];
+  let files = globSync(glob) || [ glob ];
 
   await Promise.all(
     files.map(async (file) => {
       await Promise.all(
         targetLanguages.map(async (targetLanguage) => {
-          return await translateFileToLanguage({ targetLanguage, file });
+          return await translateFileToLanguage({ targetLanguage, model, file });
         }),
       );
     }),
   );
 };
 
-const translateFileToLanguage = async ({ targetLanguage, file }) => {
+const translateFileToLanguage = async ({ targetLanguage, model, file }) => {
   let messages = [
     {
       content: `You are a translation agent who is translating a markdown file. 
         Into another language.
-        Do not translate any code or language specific file names or urls.`,
+        Do not translate any code or language specific file names or urls.
+        You are translating from ENGLISH to ${LANGUAGES[targetLanguage]}.
+        `,
       role: "system",
     },
     {
@@ -115,7 +124,7 @@ const translateFileToLanguage = async ({ targetLanguage, file }) => {
   ];
 
   let res = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: model,
     messages: messages,
   }); // this takes a long time. Splitting by paragraphs could be a way to speed this up
 
