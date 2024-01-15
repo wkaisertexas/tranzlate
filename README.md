@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/wkaisertexas/tranzlate"><strong>English</strong></a> ·
-  <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.zh-Hans.md"><strong>Chinese Simplified</strong></a> ·
+  <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.zh-Hans.md"><strong>Chinese (Simplified)</strong></a> ·
   <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.fr.md"><strong>French</strong></a> ·
   <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.es.md"><strong>Spanish</string></a> ·
   <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.de.md"><strong>German</strong></a>
@@ -31,7 +31,7 @@ https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b79
 
 # Tranzlate CLI Interface
 
-## Setup
+<h2 id="setup">Setup</h2>
 
 > The minimum supported version of Node.js is v14
 
@@ -53,7 +53,7 @@ https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b79
 
    or alternatively, provide the key when running the command
 
-## Usage
+<h2 id="usage">Usage</h2>
 
 ```bash
 tranzlate
@@ -113,7 +113,7 @@ Then you will get a output like this, which takes you through the process of tra
 └  ◻ Vietnamese
 ```
 
-### Configuration
+<h2 id="configuration">Configuration</h2>
 
 https://github.com/wkaisertexas/tranzlate/assets/27795014/5ae6ca30-d030-4ec8-8c59-e2d1593084dc
 
@@ -158,7 +158,7 @@ tranzlate set-language zh-Hans
 
 This will set your language to Simplified Chinese.
 
-## Markdown
+<h2 id="markdown">Markdown</h2>
 
 Support for markdown translations is supported. To enter markdown mode, run:
 
@@ -184,7 +184,7 @@ You will be prompted for a markdown file or glob to translate. Output translatio
 
 > Note: Markdown translation is in beta. Please report any issues you encounter.
 
-## Common Issues
+<h2 id="common-issues">Common Issues</h2>
 
 ### 429 error
 
@@ -192,7 +192,7 @@ Some users are reporting a 429 from OpenAI. This is due to incorrect billing set
 
 You can activate billing at [this link](https://platform.openai.com/account/billing/overview). Make sure to add a payment method if not under an active grant from OpenAI.
 
-## Motivation
+<h2 id="motivation">Motivation</h2>
 
 I am not a language expert. My proficiency in translation extends only to middle-school level Spanish. However, I believe in software and its importance. Who software is developed for matters. Localization is not nor never should be an afterthought. By utilizing AI translation tools, conversations about the impact software has on different communities can be had earlier in product development, not later.
 
@@ -200,7 +200,7 @@ Accelerating conversations about software's impact leads to meaningful change be
 
 Easy translation, of string catalogs, and hopefully many more file formats to come is why I created _tranzlate_.
 
-## Contributing
+<h2 id="contributing">Contributing</h2>
 
 If you want to help fix a bug or implement a feature in [Issues](https://github.com/wkaisertexas/tranzlate), please do so. Swift development is somewhat new to me, so I would appreciate community feedback.
 
@@ -208,7 +208,7 @@ If you want to help fix a bug or implement a feature in [Issues](https://github.
   <img src="https://contrib.rocks/image?repo=wkaisertexas/tranzlate" />
 </a>
 
-## Contributors
+<h2 id="contributors">Contributors</h2>
 
 ![Alt](https://repobeats.axiom.co/api/embed/74c05a15a0f3020ab2d6113b7bd0667dbe4d1ad4.svg "Repobeats analytics image")
 
