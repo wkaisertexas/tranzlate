@@ -22,7 +22,7 @@
   <a href="#common-issues"><strong>Common Issues</strong></a> ·
   <a href="#motivation"><strong>Motivation</string></a> ·
   <a href="#contributing"><strong>Contributing</strong></a> ·
-    <a href="#contributors"><strong>Contributors</strong></a>
+  <a href="#contributors"><strong>Contributors</strong></a>
 </p>
 
 https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b792-e47949c5b373
@@ -158,7 +158,7 @@ tranzlate set-language zh-Hans
 
 This will set your language to Simplified Chinese.
 
-## Markdown 
+## Markdown
 
 Support for markdown translations is supported. To enter markdown mode, run:
 
@@ -169,7 +169,7 @@ tranzlate markdown
 You will be prompted for a markdown file or glob to translate. Output translations append the ISO language code to the end of each file name. **For instance,** if you translate `README.md` to Simplified Chinese (zh-Hans), the output file will be `README.zh-Hans.md`.
 
 ```console
-┌   tranzlate: automatic markdown translation 
+┌   tranzlate: automatic markdown translation
 │
 ◇  Enter a markdown file or glob
 │  ./README.md
@@ -194,11 +194,11 @@ You can activate billing at [this link](https://platform.openai.com/account/bill
 
 ## Motivation
 
-I am not a language expert. My proficiency in translation extends only to middle-school level Spanish. However, I believe in software and its importance. Who software is developed for matters. Localization is not nor never should be an afterthought. By utilizing AI translation tools, conversations about the impact software has on different communities can be had earlier in product development, not later. 
+I am not a language expert. My proficiency in translation extends only to middle-school level Spanish. However, I believe in software and its importance. Who software is developed for matters. Localization is not nor never should be an afterthought. By utilizing AI translation tools, conversations about the impact software has on different communities can be had earlier in product development, not later.
 
-Accelerating conversations about software's impact leads to meaningful change before feature sets are locked in. This is why I believe in the power of, often imperfect, AI translation tools. Do not let perfect be the enemy of good. 
+Accelerating conversations about software's impact leads to meaningful change before feature sets are locked in. This is why I believe in the power of, often imperfect, AI translation tools. Do not let perfect be the enemy of good.
 
-Easy translation, of string catalogs, and hopefully many more file formats to come is why I created *tranzlate*. 
+Easy translation, of string catalogs, and hopefully many more file formats to come is why I created _tranzlate_.
 
 ## Contributing
 
