@@ -24,7 +24,7 @@ const conditionallySetLanguage = async () => {
 
   setLanguage(language_to_set);
 
-  outro(convertString(`Language set to ${LANGUAGES[language_to_set]}`));
+  outro(`${convertString("Language set to")} ${LANGUAGES[language_to_set]}`);
 
   process.exit(0);
 };

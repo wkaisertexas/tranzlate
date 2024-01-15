@@ -9,14 +9,8 @@ import { DEFAULT_INPUT_FILE } from "./consts.js";
 import { translate } from "./translate.js";
 
 const STATES = {
-  needs_review: `needs_review ${convertString(
-    "(recommended)",
-    "used to denote using the automatic translation with review",
-  )}`,
-  translated: `translated ${convertString(
-    "(error-prone)",
-    "used to denote a method of using the automatic translation without review",
-  )}`,
+  needs_review: `needs_review (${convertString("recommended")})`,
+  translated: `translated (${convertString("error-prone")})`,
 };
 
 const getState = async () => {
@@ -113,6 +107,8 @@ const getOutputFile = async (inputFile) => {
   } else {
     outputFile = inputFile;
   }
+  
+  return outputFile;
 };
 
 const getDescription = async () => {

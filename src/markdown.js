@@ -103,8 +103,7 @@ const markdownTranslate = async ({ targetLanguages, source, glob }) => {
 const translateFileToLanguage = async ({ targetLanguage, file }) => {
   let messages = [
     {
-      content:
-        `You are a translation agent who is translating a markdown file. 
+      content: `You are a translation agent who is translating a markdown file. 
         Into another language.
         Do not translate any code or language specific file names or urls.`,
       role: "system",
