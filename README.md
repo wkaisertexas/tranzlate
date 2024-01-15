@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-   A CLI command which uses OpenAI APIs to automatically translate <code>.xcstring</code> catalogs
+   A command line interface tool to automatically translate <code>.xcstring</code> catalogs using OpenAI.
 </h4>
 
 <p align="center">
@@ -17,7 +17,7 @@
 <p align="center">
   <a href="#setup"><strong>Setup</strong></a> ·
   <a href="#usage"><strong>Usage</strong></a> ·
-  <a href="#setting-language"><strong>Setting Language</strong></a> ·
+  <a href="#configuration"><strong>Configuration</strong></a> ·
   <a href="#markdown"><strong>Markdown</string></a> ·
   <a href="#common-issues"><strong>Common Issues</strong></a> ·
   <a href="#motivation"><strong>Motivation</string></a> ·
@@ -59,7 +59,7 @@ https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b79
 tranzlate
 ```
 
-Then you will get an output like this, which takes you through the process of creating a translation:
+Then you will get a output like this, which takes you through the process of translating a string catalog:
 
 ```bash
 ┌   tranzlate: automatic string translation
@@ -113,11 +113,11 @@ Then you will get an output like this, which takes you through the process of cr
 └  ◻ Vietnamese
 ```
 
-### Setting Language
+### Configuration
 
 https://github.com/wkaisertexas/tranzlate/assets/27795014/5ae6ca30-d030-4ec8-8c59-e2d1593084dc
 
-Because a translation utility only supporting a single language would be ironic, we support multiple languages. You can set your language by running:
+Because only supporting a single language would be ironic as a translation utility, we support changing your configuration language. You can set your language by running:
 
 ```bash
 tranzlate set-language <language>
@@ -160,13 +160,13 @@ This will set your language to Simplified Chinese.
 
 ## Markdown 
 
-Because markdown is a common format for documentation, support for markdown is included. To go into markdown mode, run:
+Support for markdown translations is supported. To enter markdown mode, run:
 
 ```sh
 tranzlate markdown
 ```
 
-This will prompt you for a markdown glob to translate. The ISO language code will be appended to the end of each file name. For instance, if you translate `README.md` to Simplified Chinese, the output file will be `README.zh-Hans.md`.
+You will be prompted for a markdown file or glob to translate. Output translations append the ISO language code to the end of each file name. **For instance,** if you translate `README.md` to Simplified Chinese (zh-Hans), the output file will be `README.zh-Hans.md`.
 
 ```console
 ┌   tranzlate: automatic markdown translation 
@@ -182,7 +182,7 @@ This will prompt you for a markdown glob to translate. The ISO language code wil
 ◆  Translating README.md...
 ```
 
-> Markdown translation is currently a beta feature and untested. Please report any issues you encounter.
+> Note: Markdown translation is in beta. Please report any issues you encounter.
 
 ## Common Issues
 
@@ -194,11 +194,15 @@ You can activate billing at [this link](https://platform.openai.com/account/bill
 
 ## Motivation
 
-Anything beyond middle-school Spanish is lost on me. I believe the future of software is a decentralized lingua france, powered by AI. Though machine translations are not perfect, good enough translations give the opportunity for software to be developed with a global audience rather than internationalized as an afterthought.
+I am not a language expert. My proficiency in translation extends only to middle-school level Spanish. However, I believe in software and its importance. Who software is developed for matters. Localization is not nor never should be an afterthought. By utilizing AI translation tools, conversations about the impact software has on different communities can be had earlier in product development, not later. 
+
+Accelerating conversations about software's impact leads to meaningful change before feature sets are locked in. This is why I believe in the power of, often imperfect, AI translation tools. Do not let perfect be the enemy of good. 
+
+Easy translation, of string catalogs, and hopefully many more file formats to come is why I created *tranzlate*. 
 
 ## Contributing
 
-If you want to help fix a bug or implement a feature in [Issues](https://github.com/wkaisertexas/tranzlate), please do so. Swift development is somewhat new to me, so I would much appreciate community feedback.
+If you want to help fix a bug or implement a feature in [Issues](https://github.com/wkaisertexas/tranzlate), please do so. Swift development is somewhat new to me, so I would appreciate community feedback.
 
 <a href="https://github.com/wkaisertexas/tranzlate/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=wkaisertexas/tranzlate" />
@@ -208,4 +212,4 @@ If you want to help fix a bug or implement a feature in [Issues](https://github.
 
 ![Alt](https://repobeats.axiom.co/api/embed/74c05a15a0f3020ab2d6113b7bd0667dbe4d1ad4.svg "Repobeats analytics image")
 
-> Thanks to the [ai-shell](https://github.com/BuilderIO/ai-shell) for letting me rip off their README template. After all, imitation is the sincerest form of flattery.
+> Thanks to the [ai-shell](https://github.com/BuilderIO/ai-shell) for their README which I used as a template.
