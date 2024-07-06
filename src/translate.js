@@ -4,25 +4,6 @@ import { readFileSync, writeFileSync } from "fs";
 
 import { LANGUAGES, BASE_REVIEW_STATE } from "./consts.js";
 
-// MAKE prompt should be made internationale, but this needs to happen later
-const makePrompt = ({
-  projectDescription,
-  comment,
-  string,
-  sourceLanguage,
-  targetLanguage,
-}) => `
-${projectDescription}
-
-${comment ? `a translation comment has been made: ${comment}\n` : ""}
-input string which should be translated to ${LANGUAGES[targetLanguage]}:
-
-${string}
-
-Translation from ${LANGUAGES[sourceLanguage]} to ${
-  LANGUAGES[targetLanguage]
-}: `;
-
 const readStringCatalog = (path) => {
   let stringData = readFileSync(path);
   return JSON.parse(stringData);
@@ -51,21 +32,20 @@ const multiTranslate = async ({
 }) => {
   let returnValue = {}; // return value has `state` and `value` keys
 
-  await Promise.all(
-    languages.map(async (language) => {
-      let completion = await getCompletion({
-        string: key,
-        comment: strings[key].comment,
-        targetLanguage: language,
-        sourceLanguage,
-        description,
-      });
-      returnValue[language] = {
-        value: completion,
-        state: review_state,
-      };
-    }),
-  );
+  let completion = await getCompletion({
+    string: key,
+    comment: strings[key].comment,
+    targetLanguages: languages,
+    sourceLanguage,
+    description,
+  });
+
+  Object.keys(completion).forEach((key) => {
+    returnValue[key] = {
+      value: completion[key], // the translated string
+      state: review_state,
+    }
+  });
 
   return { localizations: returnValue };
 };
@@ -74,33 +54,31 @@ const getCompletion = async ({
   string,
   comment,
   sourceLanguage,
-  targetLanguage,
+  targetLanguages,
   description,
 }) => {
-  const prompt = makePrompt({
-    projectDescription: description,
-    string,
-    comment,
-    sourceLanguage,
-    targetLanguage,
-  });
+  let commentString = comment ? `A comment from the developer: ${comment}` : "";
+  let descriptionPrompt = description ? `The project description is: ${description}` : "";
+
   const gptResponse = await openai.chat.completions.create({
     model: completionModel,
     messages: [
       {
         role: "system",
-        content: prompt,
-      },
+        content: `You are a translation expert from ${sourceLanguage} to the following languages: ${targetLanguages.map((lang) => LANGUAGES[lang] + "(" + lang + ")").join(", ")}. ${descriptionPrompt} You are asked to translate strings and return the result in a json object with the language code as the key and the translation as the value. Do not modify template strings (e.g. %lld) in any way. ${commentString}`,
+    },
       {
         role: "user",
         content: string,
       },
     ],
+    response_format: {type: "json_object"}, // should give us a json response
   });
 
-  // TODO: introduce some error handling here
-
   let response = gptResponse.choices[0].message.content;
+
+  response = JSON.parse(response); // turn response into a json object (should work)
+  
   return response;
 };
 
@@ -124,7 +102,7 @@ const translate = async ({
     apiKey: apiKey,
   });
   completionModel = model;
-  review_state = state;
+  review_state = state ? state : BASE_REVIEW_STATE;
 
   let newStrings = await Promise.all(
     Object.keys(strings).map(
