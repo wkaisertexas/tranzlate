@@ -1,5 +1,5 @@
 const DEFAULT_INPUT_FILE = "Localizable.xcstrings";
-const VALID_MODELS = ["gpt-3.5-turbo", "gpt-4"];
+const VALID_MODELS = ["gpt-4o", "gpt-4", "gpt-3.5-turbo"];
 const SUPPORTED_TRANSLATIONS = [
   "en",
   "zh-Hans",
