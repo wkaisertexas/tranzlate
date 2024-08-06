@@ -119,7 +119,7 @@ const translate = async ({
 
   let newStringsObj = {};
   Object.keys(strings).forEach((key, index) => {
-    newStringsObj[key] = newStrings[index];
+    newStringsObj[key] = {stringUnit: newStrings[index]};
   });
 
   let newStringCatalog = {
