@@ -51,7 +51,7 @@ const getAPIKey = async () => {
       placeholder: "sk-1234567890",
       validate: (input) => {
         if (input.startsWith("sk-")) {
-          return true;
+          return apiKey;
         } else {
           return convertString("API key must start with sk-");
         }
