@@ -1,4 +1,4 @@
-import { isCancel, cancel, select, multiselect } from "@clack/prompts";
+import { isCancel, cancel, select, multiselect, text } from "@clack/prompts";
 
 import { convertString } from "./localization.js";
 
