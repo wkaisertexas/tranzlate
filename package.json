@@ -1,6 +1,6 @@
 {
   "name": "tranzlate.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Translate your string catalogs to any language | 将您的字符串目录翻译成任何语言 | Traduzca sus catálogos de cadenas a cualquier idioma | Traduisez vos catalogues de chaînes dans n'importe quelle langue",
   "main": "./src/index.js",
   "type": "module",

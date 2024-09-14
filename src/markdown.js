@@ -45,8 +45,8 @@ const markdownTUI = async (fileGlob) => {
 
     gracefulExit(fileGlob);
 
-    if(!fileGlob) {
-      fileGlob = "./README.md"
+    if (!fileGlob) {
+      fileGlob = "./README.md";
     }
   }
 
@@ -69,8 +69,8 @@ const markdownTUI = async (fileGlob) => {
     })),
   });
   gracefulExit(model);
-  
-  model = model || VALID_MODELS[0]
+
+  model = model || VALID_MODELS[0];
 
   let waitingSpinner = spinner();
 
@@ -94,7 +94,7 @@ let openai;
 const markdownTranslate = async ({ targetLanguages, model, glob }) => {
   openai = new OpenAI();
 
-  let files = globSync(glob) || [ glob ];
+  let files = globSync(glob) || [glob];
 
   await Promise.all(
     files.map(async (file) => {
