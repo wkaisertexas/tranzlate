@@ -44,7 +44,7 @@ const multiTranslate = async ({
     returnValue[key] = {
       value: completion[key], // the translated string
       state: review_state,
-    }
+    };
   });
 
   return { localizations: returnValue };
@@ -58,27 +58,33 @@ const getCompletion = async ({
   description,
 }) => {
   let commentString = comment ? `A comment from the developer: ${comment}` : "";
-  let descriptionPrompt = description ? `The project description is: ${description}` : "";
+  let descriptionPrompt = description
+    ? `The project description is: ${description}`
+    : "";
 
   const gptResponse = await openai.chat.completions.create({
     model: completionModel,
     messages: [
       {
         role: "system",
-        content: `You are a translation expert from ${sourceLanguage} to the following languages: ${targetLanguages.map((lang) => LANGUAGES[lang] + "(" + lang + ")").join(", ")}. ${descriptionPrompt} You are asked to translate strings and return the result in a json object with the language code as the key and the translation as the value. Do not modify template strings (e.g. %lld) in any way. ${commentString}`,
-    },
+        content: `You are a translation expert from ${sourceLanguage} to the following languages: ${targetLanguages
+          .map((lang) => LANGUAGES[lang] + "(" + lang + ")")
+          .join(
+            ", ",
+          )}. ${descriptionPrompt} You are asked to translate strings and return the result in a json object with the language code as the key and the translation as the value. Do not modify template strings (e.g. %lld) in any way. ${commentString}`,
+      },
       {
         role: "user",
         content: string,
       },
     ],
-    response_format: {type: "json_object"}, // should give us a json response
+    response_format: { type: "json_object" }, // should give us a json response
   });
 
   let response = gptResponse.choices[0].message.content;
 
   response = JSON.parse(response); // turn response into a json object (should work)
-  
+
   return response;
 };
 
@@ -119,7 +125,7 @@ const translate = async ({
 
   let newStringsObj = {};
   Object.keys(strings).forEach((key, index) => {
-    newStringsObj[key] = {stringUnit: newStrings[index]};
+    newStringsObj[key] = { stringUnit: newStrings[index] };
   });
 
   let newStringCatalog = {

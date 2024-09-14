@@ -35,7 +35,7 @@ https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b79
 
 > Node.js的最低支持版本为v14
 
-1. 全局安装_tranzlate_:
+1. 全局安装*tranzlate*:
 
    ```sh
    npm install -g tranzlate.js
@@ -197,7 +197,7 @@ tranzlate markdown
 
 加速关于软件影响的讨论会在功能集锁定之前带来有意义的变化。这就是为什么我相信尽管不完美，但AI 翻译工具的力量。不要让完美成为我们取得进步的障碍。
 
-易于翻译，字符串目录，希望有更多文件格式在未来供我创建_tranzlate_使用。
+易于翻译，字符串目录，希望有更多文件格式在未来供我创建*tranzlate*使用。
 
 <h2 id="contributing">贡献</h2>
 

@@ -107,7 +107,7 @@ const getOutputFile = async (inputFile) => {
   } else {
     outputFile = inputFile;
   }
-  
+
   return outputFile;
 };
 
