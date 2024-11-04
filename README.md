@@ -182,7 +182,8 @@ You will be prompted for a markdown file or glob to translate. Output translatio
 ◆  Translating README.md...
 ```
 
-> Note: Markdown translation is in beta. Please report any issues you encounter.
+> [!NOTE]
+> Markdown translation is in beta. Please report any issues you encounter.
 
 <h2 id="common-issues">Common Issues</h2>
 
