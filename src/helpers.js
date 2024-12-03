@@ -5,12 +5,23 @@ import { convertString } from "./localization.js";
 import { VALID_MODELS, LANGUAGES, SUPPORTED_TRANSLATIONS } from "./consts.js";
 import { setAPIKey, getAPIKeyFromConfig } from "./config.js";
 
+/**
+ * Either does nothing or exits the process if the user canceled
+ * 
+ * @param {string} input
+ * @returns 
+ */
 const gracefulExit = (input) => {
   if (!isCancel(input)) return;
   cancel(convertString("Translation cancelled"));
   process.exit(0);
 };
 
+/**
+ * Allows the user to select an openai model
+ * 
+ * @returns string
+ */
 const getModel = async () => {
   const model = await select({
     message: convertString("Select a model"),
@@ -25,6 +36,11 @@ const getModel = async () => {
   return model;
 };
 
+/**
+ * Asks the user to multiselect a list of target langauges
+ * 
+ * @returns
+ */
 const getLanguages = async () => {
   const languages = await multiselect({
     message: convertString("Select languages to translate to."),
@@ -40,6 +56,11 @@ const getLanguages = async () => {
   return languages;
 };
 
+/**
+ * Gets either a valid api key from the config or prompts the user for one
+ * 
+ * @returns {Promise<string>} openai key
+ */
 const getAPIKey = async () => {
   let apiKey = process.env["OPENAI_API_KEY"];
 
@@ -65,6 +86,12 @@ const getAPIKey = async () => {
   return apiKey;
 };
 
+/**
+ * A lowercase inclusion to check for suppported translations
+ * 
+ * @param {string} language
+ * @returns string | undefined translation
+ */
 const matchSupportedTranslations = (language) => {
   let matching = SUPPORTED_TRANSLATIONS.map((supported_language) =>
     String(supported_language).toLowerCase() === String(language).toLowerCase()

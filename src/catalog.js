@@ -1,12 +1,13 @@
 /// Used for translating string catalogs
 import { intro, select, spinner, outro, text } from "@clack/prompts";
+import colors from "picocolors";
 
 import { gracefulExit, getAPIKey, getLanguages, getModel } from "./helpers.js";
-import colors from "picocolors";
 import { convertString } from "./localization.js";
-
 import { DEFAULT_INPUT_FILE } from "./consts.js";
 import { translate } from "./translate.js";
+
+import { existsSync } from "fs";
 
 /**
  * An enum representing the possible translation states of a string key in a string catalog
@@ -30,6 +31,9 @@ const getState = async () => {
   gracefulExit(state);
 };
 
+/**
+ * Prompt TUI for asking which catalog to translate and to which languages
+ */
 const stringCatalogTUI = async () => {
   introduction();
 
@@ -75,7 +79,7 @@ const getInputFile = async () => {
   let inputFile = await text({
     message: convertString("Enter input file"),
     placeholder: DEFAULT_INPUT_FILE,
-    validate: validateStringFileInput,
+    validate: validateInput,
     required: false,
   });
   gracefulExit(inputFile);
@@ -89,10 +93,19 @@ const getInputFile = async () => {
   return inputFile;
 };
 
-const validateStringFileInput = (input) => {
-  if (!input) return; // okay to be optional / empty
+/**
+ * Make sure the input file path is valid and exists either returns nothing (accept) or an error message (retry)
+ * 
+ * @param {string} input 
+ * @returns string | undefined
+ */
+const validateInput = (input) => {
+  if (!input) return; // okay to be optional / empty -> we use Localizable.strings by default
   if (!input.endsWith(".xcstrings")) {
     return convertString("Input file must end with .xcstrings");
+  }
+  if(!existsSync(input)) {
+    return convertString("File does not exist");
   }
 };
 
@@ -100,7 +113,7 @@ const getOutputFile = async (inputFile) => {
   let outputFile = await text({
     message: convertString("Enter the output file"),
     placeholder: inputFile,
-    validate: validateStringFileInput,
+    validate: validateOutput,
     required: false,
   });
   gracefulExit(outputFile);
@@ -112,6 +125,19 @@ const getOutputFile = async (inputFile) => {
   }
 
   return outputFile;
+};
+
+/**
+ * Make sure the output file path is a valid .xcstrings file path or empty
+ * 
+ * @param {string} input 
+ * @returns string | undefined
+ */
+const validateOutput = (output) => {
+  if (!input) return; // okay to be optional / empty -> just use the input file
+  if (!input.endsWith(".xcstrings")) {
+    return convertString("Input file must end with .xcstrings");
+  }
 };
 
 const getDescription = async () => {

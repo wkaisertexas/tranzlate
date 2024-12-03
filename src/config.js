@@ -1,10 +1,10 @@
-import { BASE_LANGUAGE } from "./consts.js";
-
-import { readFileSync, writeFileSync } from "fs";
-
 import path from "path";
 import os from "os";
 import ini from "ini";
+
+import { BASE_LANGUAGE } from "./consts.js";
+
+import { readFileSync, writeFileSync } from "fs";
 
 const CONFIG_PATH = path.join(os.homedir(), ".tranzlate");
 
@@ -16,7 +16,7 @@ const config = (() => {
   }
 })();
 
-// Setters
+// Setters set and save the config
 const setLanguage = (language) => {
   config.language = language;
   saveConfig();
@@ -28,8 +28,8 @@ const setAPIKey = (key) => {
 };
 
 const saveConfig = () => {
-  let stringConfig = ini.stringify(config);
-  writeFileSync(CONFIG_PATH, stringConfig);
+  let ini_string_config = ini.stringify(config);
+  writeFileSync(CONFIG_PATH, ini_string_config);
 };
 
 // Getters
