@@ -7,6 +7,9 @@ import { intro, select, outro } from "@clack/prompts";
 
 import colors from "picocolors";
 
+/**
+ * If the user passed in set-langauge as the second argument, we will either show a prompt or use the third argument as the language to set.
+ */
 const conditionallySetLanguage = async () => {
   if (process.argv.length < 3) return;
   if (process.argv[3] !== "set-language" && process.argv[2] !== "set-language")
@@ -29,7 +32,11 @@ const conditionallySetLanguage = async () => {
   process.exit(0);
 };
 
-// Helpers
+/**
+ * Asks the user to select from a list of supported languages for the tranzlate form
+ * 
+ * @returns {Promise<string>} - Returns the language selected by the user
+ */
 const askUserForLanguage = async () => {
   intro(
     `${colors.bgCyan(

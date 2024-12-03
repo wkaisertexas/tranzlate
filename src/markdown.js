@@ -1,7 +1,8 @@
-// General parser for creating abbreviated README files using ISO language codes
-
-// REF: ISO 639-1 Language codes
-// https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+/**
+ * General parser for creating abbreviated README files using ISO language codes
+ * 
+ * [REF: ISO 639-1 Language codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+ */
 import { gracefulExit } from "./helpers.js";
 import { convertString } from "./localization.js";
 import { LANGUAGES, VALID_MODELS } from "./consts.js";
@@ -12,6 +13,12 @@ import { globSync } from "glob";
 import { intro, select, text, multiselect, spinner } from "@clack/prompts";
 import color from "picocolors";
 
+/**
+ * Turns markdown files into files with the langauge postfixed
+ * 
+ * @param {string} fileGlob Files to translate
+ * @returns 
+ */
 const markdownTUI = async (fileGlob) => {
   if (fileGlob && process.argv.length < 3) return;
   if (
@@ -90,7 +97,15 @@ const markdownTUI = async (fileGlob) => {
   process.exit(0);
 };
 
-let openai;
+let openai; // cheeky global
+
+/**
+ * Takes languages and a model and uses it to convert each markdown file
+ * 
+ * @param {string[]} targetLanguages Languages to translate to
+ * @param {string} model OpenAI model to use
+ * @param {string} glob File glob to translate
+ */
 const markdownTranslate = async ({ targetLanguages, model, glob }) => {
   openai = new OpenAI();
 
@@ -107,6 +122,12 @@ const markdownTranslate = async ({ targetLanguages, model, glob }) => {
   );
 };
 
+/**
+ * Translates a *single* markdonw file into a target language
+ * @param {targetLanguage} targetLanguage Language to translate to
+ * @param {model} model OpenAI model to use
+ * @param {file} file File to translate
+ */
 const translateFileToLanguage = async ({ targetLanguage, model, file }) => {
   let messages = [
     {
@@ -130,6 +151,10 @@ const translateFileToLanguage = async ({ targetLanguage, model, file }) => {
 
   let text = res.choices[0].message.content;
   let newFileName = file.replace(".md", `.${targetLanguage}.md`);
+
+  if(!newFileName.endsWith(".md")) { // avoiding overwriting the file
+    newFileName = newFileName + `.${targetLanguage}`;
+  }
 
   writeFileSync(newFileName, text);
 };
