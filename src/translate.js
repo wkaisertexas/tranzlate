@@ -2,6 +2,11 @@ import OpenAI from "openai";
 import { readFileSync, writeFileSync } from "fs";
 import { LANGUAGES, BASE_REVIEW_STATE } from "./consts.js";
 
+/**
+ * Parses a string catalog as a JSON object from a file
+ * @param {string} path 
+ * @returns 
+ */
 const readStringCatalog = (path) => {
   let stringData = readFileSync(path);
   return JSON.parse(stringData);
@@ -26,35 +31,16 @@ const writeStringCatalog = (path, catalog) => {
   writeFileSync(path, formattedJson);
 };
 
-const multiTranslate = async ({
-  key,
-  strings,
-  languages,
-  sourceLanguage,
-  description,
-}) => {
-  let returnValue = {}; // Will store the localizations object
-
-  let completion = await getCompletion({
-    string: key,
-    comment: strings[key].comment,
-    targetLanguages: languages,
-    sourceLanguage,
-    description,
-  });
-
-  Object.keys(completion).forEach((lang) => {
-    returnValue[lang] = {
-      stringUnit: {
-        value: completion[lang], // The translated string
-        state: review_state,
-      },
-    };
-  });
-
-  return returnValue; // Returns the localizations object
-};
-
+/**
+ * Makes and calls an openai prompt to get all translations for a string
+ * 
+ * @param {string} string the string to translate
+ * @param {string} comment a comment from the developer
+ * @param {string} sourceLanguage the source language
+ * @param {Array} targetLanguages the target languages
+ * @param {string} description the project description
+ * @returns 
+ */
 const getCompletion = async ({
   string,
   comment,
@@ -93,9 +79,58 @@ const getCompletion = async ({
   return response;
 };
 
+/**
+ * Translates a set of strings into multiple languages
+ * @param {string} key The string to translate
+ * @param {object} strings The strings part of the catalog
+ * @param {Array} languages The languages to translate to
+ * @param {string} sourceLanguage The source language
+ * @param {string} description The project description
+ * @returns 
+ */
+const multiTranslate = async ({
+  key,
+  strings,
+  languages,
+  sourceLanguage,
+  description,
+}) => {
+  let returnValue = {}; // Will store the localizations object
+
+  let completion = await getCompletion({
+    string: key,
+    comment: strings[key].comment,
+    targetLanguages: languages,
+    sourceLanguage,
+    description,
+  });
+
+  Object.keys(completion).forEach((lang) => {
+    returnValue[lang] = {
+      stringUnit: {
+        value: completion[lang], // The translated string
+        state: review_state,
+      },
+    };
+  });``
+
+  return returnValue; // Returns the localizations object
+};
+
 let openai, completionModel;
 let review_state = BASE_REVIEW_STATE;
 
+/**
+ * Primary function called by the user-facing form to translate a string catalog
+ *
+ * @param {string} inputFile Input string catalog file path
+ * @param {string} outputFile Output file path
+ * @param {Array} languages Languages to translate to
+ * @param {string} model OpenAI model to use
+ * @param {string} description Project description
+ * @param {string} apiKey OpenAI API key
+ * @param {string} state Translation state to use after completion
+ */
 const translate = async ({
   inputFile,
   outputFile,
@@ -128,6 +163,7 @@ const translate = async ({
     ),
   );
 
+  // Merging new and old translated strings
   let newStringsObj = {};
   Object.keys(strings).forEach((key, index) => {
     let comment = strings[key].comment ? { comment: strings[key].comment } : {};
