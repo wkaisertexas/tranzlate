@@ -2,9 +2,10 @@ import { readFileSync } from "fs";
 
 import { BASE_LANGUAGE } from "./consts.js";
 import { getLanguage } from "./config.js";
-import STRINGCATALOG from "./strings.json" assert { type: "json" };
+import { writeStringCatalog } from "./translate.js";
 
-let CURRENTLANGUAGE = getLanguage() || BASE_LANGUAGE;
+import STRING_CATALOG from "./strings.json" assert { type: "json" };
+let CURRENT_LANGUAGE = getLanguage() || BASE_LANGUAGE;
 
 /**
  * Global object to store unique strings found in the project for translation
@@ -21,20 +22,18 @@ let unique_strings = {};
 const convertString = (string) => {
   unique_strings[string] = unique_strings[string] + 1 || 0;
 
-  if (!STRINGCATALOG.strings[string]) {
+  if (!STRING_CATALOG.strings[string]) {
     // console.log(`No string found for ${string}`);
     return string;
   }
 
-  if (!STRINGCATALOG.strings[string].localizations[CURRENTLANGUAGE]) {
-    // console.log(`No translation found for ${string} in ${CURRENTLANGUAGE}`);
+  if (!STRING_CATALOG.strings[string].localizations[CURRENT_LANGUAGE]) {
+    // console.log(`No translation found for ${string} in ${CURRENT_LANGUAGE}`);
     return string;
   }
 
-  return STRINGCATALOG.strings[string].localizations[CURRENTLANGUAGE].value;
+  return STRING_CATALOG.strings[string].localizations[CURRENT_LANGUAGE].value;
 };
-
-import { writeStringCatalog } from "./translate.js";
 
 /**
  * Creates a `strings.json` file with the unique strings found in the project
@@ -87,8 +86,8 @@ const expandStrings = (strings) => {
 
 export {
   convertString,
-  CURRENTLANGUAGE,
-  STRINGCATALOG,
+  CURRENT_LANGUAGE,
+  STRING_CATALOG,
   makeStringsDictionary,
   expandStrings,
 };
