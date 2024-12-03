@@ -133,7 +133,7 @@ const getOutputFile = async (inputFile) => {
  * @param {string} input 
  * @returns string | undefined
  */
-const validateOutput = (output) => {
+const validateOutput = (input) => {
   if (!input) return; // okay to be optional / empty -> just use the input file
   if (!input.endsWith(".xcstrings")) {
     return convertString("Input file must end with .xcstrings");

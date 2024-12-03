@@ -3,19 +3,19 @@
 </h1>
 
 <h4 align="center">
-   Ein Befehlszeilen-Interface-Tool zur automatischen Übersetzung von <code>.xcstring</code> Katalogen mit OpenAI.
+   Ein Kommandozeilen-Tool zur automatischen Übersetzung von <code>.xcstring</code> Katalogen mit Hilfe von OpenAI.
 </h4>
 
 <p align="center">
-  <a href="https://github.com/wkaisertexas/tranzlate"><strong>Englisch</strong></a> ·
-  <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.zh-Hans.md"><strong>Chinesisch (vereinfacht)</strong></a> ·
+  <a href="https://github.com/wkaisertexas/tranzlate"><strong>English</strong></a> ·
+  <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.zh-Hans.md"><strong>Chinesisch (Vereinfacht)</strong></a> ·
   <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.fr.md"><strong>Französisch</strong></a> ·
   <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.es.md"><strong>Spanisch</strong></a> ·
   <a href="https://github.com/wkaisertexas/tranzlate/blob/main/README.de.md"><strong>Deutsch</strong></a>
 </p>
 
 <p align="center">
-  <a href="#setup"><strong>Setup</strong></a> ·
+  <a href="#setup"><strong>Einrichtung</strong></a> ·
   <a href="#usage"><strong>Verwendung</strong></a> ·
   <a href="#configuration"><strong>Konfiguration</strong></a> ·
   <a href="#markdown"><strong>Markdown</strong></a> ·
@@ -31,9 +31,9 @@ https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b79
 
 # Tranzlate CLI Interface
 
-<h2 id="setup">Setup</h2>
+<h2 id="setup">Einrichtung</h2>
 
-> Die Minimum unterstützte Version von Node.js ist v14
+> Die minimal unterstützte Version von Node.js ist v14
 
 1. Installiere _tranzlate_ global:
 
@@ -41,17 +41,17 @@ https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b79
    npm install -g tranzlate.js
    ```
 
-2. Hole deinen API-Schlüssel von [OpenAI](https://platform.openai.com/account/api-keys)
+2. Erhalte deinen API-Schlüssel von [OpenAI](https://platform.openai.com/account/api-keys)
 
-   > Hinweis: Wenn du noch kein Konto hast, musst du dich registrieren und die Rechnungsstellung einrichten.
+   > Hinweis: Wenn du noch keinen Account hast, musst du einen erstellen und die Abrechnung einrichten.
 
-3. Setze den Schlüssel, damit tranzlate ihn verwenden kann. Du kannst dies tun, indem du folgenden Befehl ausführst:
+3. Setze den Schlüssel, damit tranzlate ihn nutzen kann. Du kannst dies tun, indem du folgenden Befehl ausführst:
 
    ```sh
-   echo export OPENAI_API_KEY=<Dein Token> >> ~/.bashrc
+   echo export OPENAI_API_KEY=<your token> >> ~/.bashrc
    ```
 
-   Alternativ kannst du den Schlüssel angeben, wenn du den Befehl ausführst
+   oder alternativ den Schlüssel beim Ausführen des Befehls angeben
 
 <h2 id="usage">Verwendung</h2>
 
@@ -64,26 +64,26 @@ Dann erhältst du eine Ausgabe wie diese, die dich durch den Prozess der Überse
 ```bash
 ┌   tranzlate: automatische String-Übersetzung
 │
-◇  Gib die Eingabe-Datei ein
+◇  Eingabedatei angeben
 │  Localizable.xcstrings
 │
-◇  Gib die Ausgabe-Datei ein
+◇  Ausgabedatei angeben
 │  Localizable.xcstrings
 │
-◆  Wähle die zu übersetzenden Sprachen aus.
+◆  Zu übersetzende Sprachen auswählen.
 │  ◻ Arabisch
 │  ◻ Katalanisch
-│  ◻ Chinesisch (vereinfacht)
-│  ◻ Chinesisch (traditionell)
+│  ◻ Chinesisch (Vereinfacht)
+│  ◻ Chinesisch (Traditionell)
 │  ◻ Kroatisch
 │  ◼ Tschechisch
 │  ◼ Dänisch
-│  ◻ Holländisch
+│  ◻ Niederländisch
 │  ◻ Englisch
 │  ◻ Englisch (Australien)
 │  ◻ Englisch (Kanada)
-│  ◻ Englisch (U.K.)
-│  ◻ Englisch (U.S.)
+│  ◻ Englisch (Vereinigtes Königreich)
+│  ◻ Englisch (USA)
 │  ◻ Finnisch
 │  ◻ Französisch
 │  ◻ Französisch (Kanada)
@@ -96,7 +96,7 @@ Dann erhältst du eine Ausgabe wie diese, die dich durch den Prozess der Überse
 │  ◻ Italienisch
 │  ◻ Japanisch
 │  ◻ Koreanisch
-│  ◻ Malay
+│  ◻ Malaiisch
 │  ◻ Norwegisch
 │  ◻ Polnisch
 │  ◼ Portugiesisch (Brasilien)
@@ -107,7 +107,7 @@ Dann erhältst du eine Ausgabe wie diese, die dich durch den Prozess der Überse
 │  ◻ Spanisch (Mexiko)
 │  ◼ Spanisch (Spanien)
 │  ◻ Schwedisch
-│  ◻ Thailändisch
+│  ◻ Thai
 │  ◻ Türkisch
 │  ◼ Ukrainisch
 └  ◻ Vietnamesisch
@@ -117,13 +117,13 @@ Dann erhältst du eine Ausgabe wie diese, die dich durch den Prozess der Überse
 
 https://github.com/wkaisertexas/tranzlate/assets/27795014/5ae6ca30-d030-4ec8-8c59-e2d1593084dc
 
-Da es ironisch wäre, als Übersetzungstool nur eine einzige Sprache zu unterstützen, unterstützen wir das Ändern Ihrer Konfigurationssprache. Du kannst deine Sprache einstellen, indem du folgendes ausführst:
+Da es ironisch wäre, nur eine Sprache zu unterstützen, bieten wir die Möglichkeit, deine Konfigurationssprache zu ändern. Du kannst deine Sprache einstellen, indem du den folgenden Befehl ausführst:
 
 ```bash
-tranzlate set-language <Sprache>
+tranzlate set-language <language>
 ```
 
-Wo `<Sprache>` eine der folgenden ist:
+Wobei `<language>` eines der Folgenden ist:
 
 <table align="center">
   <thead>
@@ -150,59 +150,60 @@ Wo `<Sprache>` eine der folgenden ist:
   </tbody>
 </table>
 
-Zum Beispiel, wenn du auf Vereinfachtes Chinesisch wechseln möchtest, kannst du das tun, indem du den LANGUAGE-Wert auf zh-Hans setzt:
+Zum Beispiel, wenn du zu Vereinfachtem Chinesisch wechseln möchtest, kannst du den LANGUAGE-Wert auf zh-Hans setzen:
 
 ```sh
 tranzlate set-language zh-Hans
 ```
 
-Dadurch wird deine Sprache auf Vereinfachtes Chinesisch eingestellt.
+Dies setzt deine Sprache auf Vereinfachtes Chinesisch.
 
 <h2 id="markdown">Markdown</h2>
 
-Die Unterstützung für Markdown-Übersetzungen wird unterstützt. Um in den Markdown-Modus zu wechseln, führe aus:
+Unterstützung für Markdown-Übersetzungen ist gegeben. Um den Markdown-Modus zu aktivieren, führe aus:
 
 ```sh
 tranzlate markdown
 ```
 
-Du wirst aufgefordert, eine Markdown-Datei oder eine Glob-Datei zur Übersetzung einzugeben. Die Ausgabeübersetzungen fügen den ISO-Sprachcode am Ende jedes Dateinamens an. **Zum Beispiel,** wenn du `README.md` ins Vereinfachte Chinesisch (zh-Hans) übersetzt, wird die Ausgabedatei `README.zh-Hans.md` sein.
+Du wirst nach einer Markdown-Datei oder einem Glob zur Übersetzung gefragt. Übersetzte Ausgaben hängen den ISO-Sprachcode an das Ende jedes Dateinamens an. **Beispielsweise**, wenn du `README.md` ins Vereinfachte Chinesisch (zh-Hans) übersetzt, wird die Ausgabedatei `README.zh-Hans.md` sein.
 
 ```console
-┌   tranzlate: automatische markdown Übersetzung
+┌   tranzlate: automatische Markdown-Übersetzung
 │
-◇  Gib eine markdown Datei oder Glob ein
+◇  Gib eine Markdown-Datei oder einen Glob an
 │  ./README.md
 │
-◇  Wähle die zu übersetzenden Sprachen aus
+◇  Wähle Sprachen zur Übersetzung aus
 │  fi - Finnisch, hu - Ungarisch, pl - Polnisch, ru - Russisch
 │
-◇  Wähle ein Modell aus
+◇  Wähle ein Modell
 │  gpt-3.5-turbo
-◆  Übersetzung von README.md...
+◆  Übersetze README.md...
 ```
 
-> Hinweis: Die Markdown-Übersetzung befindet sich in der Beta-Phase. Bitte melde alle Probleme, auf die du stößt.
+> [!HINWEIS]
+> Die Markdown-Übersetzung befindet sich in der Beta-Phase. Bitte melde etwaige Probleme, auf die du stößt.
 
 <h2 id="common-issues">Häufige Probleme</h2>
 
 ### 429 Fehler
 
-Einige Benutzer melden einen 429 von OpenAI. Dies liegt an einer falschen Rechnungsstellungseinstellung oder übermäßiger Quotennutzung. Bitte folgen Sie [dieser Anleitung](https://help.openai.com/en/articles/6891831-error-code-429-you-exceeded-your-current-quota-please-check-your-plan-and-billing-details), um das zu beheben.
+Einige Nutzer berichten von einem 429-Fehler von OpenAI. Dies liegt an einer falschen Abrechnungseinstellung oder übermäßigem Kontingentverbrauch. Befolge bitte [diese Anleitung](https://help.openai.com/en/articles/6891831-error-code-429-you-exceeded-your-current-quota-please-check-your-plan-and-billing-details), um dies zu beheben.
 
-Sie können die Abrechnung unter [diesem Link](https://platform.openai.com/account/billing/overview) aktivieren. Stellen Sie sicher, dass Sie eine Zahlungsmethode hinzufügen, wenn Sie nicht unter einer aktiven Förderung von OpenAI stehen.
+Du kannst die Abrechnung unter [diesem Link](https://platform.openai.com/account/billing/overview) aktivieren. Stelle sicher, dass du eine Zahlungsmethode hinzufügst, wenn du kein aktives Stipendium von OpenAI hast.
 
 <h2 id="motivation">Motivation</h2>
 
-Ich bin kein Sprachexperte. Meine Übersetzungskompetenz erstreckt sich nur auf Spanisch auf Mittelschulniveau. Aber ich glaube an Software und ihre Bedeutung. Für wen die Software entwickelt wird, ist wichtig. Lokalisierung ist kein und sollte nie ein nachträglicher Gedanke sein. Durch die Nutzung von KI-Übersetzungstools können Gespräche über die Auswirkungen von Software auf verschiedene Gemeinschaften früher in der Produktentwicklung und nicht später geführt werden.
+Ich bin kein Sprachexperte. Meine Übersetzungskenntnisse beschränken sich auf das Mittelstufenniveau in Spanisch. Doch ich glaube an Software und ihre Bedeutung. Für wen Software entwickelt wird, ist wichtig. Lokalisierung sollte nie als nachträgliche Überlegung betrachtet werden. Durch die Nutzung von KI-Übersetzungstools können Gespräche über den Einfluss von Software auf verschiedene Gemeinschaften früher in der Produktentwicklung geführt werden, nicht später.
 
-Die Beschleunigung von Gesprächen über die Auswirkungen von Software führt zu bedeutenden Veränderungen, bevor die Merkmalssets festgelegt sind. Deshalb glaube ich an die Macht von, oft unvollkommenen, KI-Übersetzungstools. Lass das Perfekte nicht der Feind des Guten sein.
+Gespräche über den Einfluss von Software zu beschleunigen, führt zu bedeutenden Veränderungen, bevor der Funktionsumfang festgelegt ist. Deshalb glaube ich an die Kraft von, oft unvollkommenen, KI-Übersetzungstools. Lass das Perfekte nicht der Feind des Guten sein.
 
-Einfache Übersetzung, von Zeichenketten-Katalogen, und hoffentlich noch vielen weiteren Dateiformaten ist der Grund, warum ich _tranzlate_ erstellt habe.
+Einfache Übersetzung von String-Katalogen und hoffentlich vielen weiteren Dateiformaten ist der Grund, warum ich _tranzlate_ erstellt habe.
 
 <h2 id="contributing">Mitwirken</h2>
 
-Wenn Sie einen Bug beheben oder ein Feature in [Problemen](https://github.com/wkaisertexas/tranzlate) implementieren möchten, tun Sie das bitte. Swift-Entwicklung ist für mich etwas Neues, daher würde ich die Rückmeldung der Community zu schätzen wissen.
+Wenn du helfen möchtest, einen Fehler zu beheben oder ein Feature in [Issues](https://github.com/wkaisertexas/tranzlate) zu implementieren, dann tu das bitte. Die Swift-Entwicklung ist für mich relativ neu, daher würde ich Rückmeldungen aus der Community schätzen.
 
 <a href="https://github.com/wkaisertexas/tranzlate/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=wkaisertexas/tranzlate" />
@@ -210,6 +211,6 @@ Wenn Sie einen Bug beheben oder ein Feature in [Problemen](https://github.com/wk
 
 <h2 id="contributors">Mitwirkende</h2>
 
-![Alt](https://repobeats.axiom.co/api/embed/74c05a15a0f3020ab2d6113b7bd0667dbe4d1ad4.svg "Repobeats Analytics Bild")
+![Alt](https://repobeats.axiom.co/api/embed/74c05a15a0f3020ab2d6113b7bd0667dbe4d1ad4.svg "Repobeats analytics image")
 
-> Danke an [ai-shell](https://github.com/BuilderIO/ai-shell) für ihre README, die ich als Vorlage verwendet habe.
+> Danke an die [ai-shell](https://github.com/BuilderIO/ai-shell) für ihr README, welches ich als Vorlage verwendet habe.
