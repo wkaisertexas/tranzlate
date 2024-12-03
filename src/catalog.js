@@ -8,6 +8,9 @@ import { convertString } from "./localization.js";
 import { DEFAULT_INPUT_FILE } from "./consts.js";
 import { translate } from "./translate.js";
 
+/**
+ * An enum representing the possible translation states of a string key in a string catalog
+ */
 const STATES = {
   needs_review: `needs_review (${convertString("recommended")})`,
   translated: `translated (${convertString("error-prone")})`,
@@ -113,7 +116,7 @@ const getOutputFile = async (inputFile) => {
 
 const getDescription = async () => {
   const description = await text({
-    message: convertString("Enter a description of your project"),
+    message: convertString("Enter a description or special instructions for translation"),
     help: convertString("This will be used to give context to the translator."),
     placeholder: convertString("This app is a todo list app."),
     required: false,
