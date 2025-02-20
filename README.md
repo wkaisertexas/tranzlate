@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-   A command line interface tool to automatically translate <code>.xcstring</code> catalogs using OpenAI.
+   A command line interface tool to automatically translate <code>.xcstrings</code> catalogs using OpenAI.
 </h4>
 
 <p align="center">
@@ -43,7 +43,8 @@ https://github.com/wkaisertexas/tranzlate/assets/27795014/6702dc3c-7f4b-4619-b79
 
 2. Retrieve your API key from [OpenAI](https://platform.openai.com/account/api-keys)
 
-   > Note: If you haven't already, you'll have to create an account and set up billing.
+> [!NOTE]
+> If you haven't already, you'll have to create an account and set up billing.
 
 3. Set the key so tranzlate can use it. You can do this by running:
 
@@ -150,7 +151,7 @@ Where `<language>` is one of the following:
   </tbody>
 </table>
 
-For instance, if you want to switch to Simplified Chinese, you can do so by setting the LANGUAGE value to zh-Hans:
+For instance, if you want to switch to Simplified Chinese, you can do so by setting the `LANGUAGE` value to `zh-Hans`:
 
 ```sh
 tranzlate set-language zh-Hans
@@ -213,4 +214,5 @@ If you want to help fix a bug or implement a feature in [Issues](https://github.
 
 ![Alt](https://repobeats.axiom.co/api/embed/74c05a15a0f3020ab2d6113b7bd0667dbe4d1ad4.svg "Repobeats analytics image")
 
+> [!NOTE]
 > Thanks to the [ai-shell](https://github.com/BuilderIO/ai-shell) for their README which I used as a template.
